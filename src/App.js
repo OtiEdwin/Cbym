@@ -1,5 +1,6 @@
 import './App.css';
 import Navigation from './Navigation';
+import Login from './Login';
 
 function App() {
   return (
@@ -69,6 +70,7 @@ function App() {
       </div>
 
     </section>
+    <Login/>
 
     <footer className='foot col space-btw'>
       <div className='row'>

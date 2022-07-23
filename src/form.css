@@ -1,0 +1,133 @@
+.form-holder{
+    width: 100%;
+    min-height: 100%;
+    padding: 4rem 2rem;
+    margin: auto;
+
+}
+.form{
+    width: 90%;
+    min-height: 70vh;
+    margin: auto;
+    border-radius: 1rem;
+    background-image: linear-gradient(60deg , var(--primary-color--dark), var(--secondary-color) );
+    box-shadow: .1px .1px 5px grey;
+}
+.form-background{
+    background-image: url();
+}
+.form-inner{
+    width: 90%;
+    margin: auto;
+    padding-block: 2rem;
+
+}
+.form-register{
+    width: 75%;
+    margin: auto;
+    padding-block: 2rem;
+}
+
+.form-img{
+    width: 70%;
+    padding: 1.2rem;
+}
+.login, .register{
+    height: 100%;
+    padding: 5rem 5rem;
+    margin: auto;
+    background-color: #f6f6f6;
+}
+.label{
+    font-weight: 600;
+    font-size: 0.75rem;
+    top: -20%;
+    left: 8%;
+    background-color: #f6f6f6;
+    padding-inline: .2rem;
+}
+.input-holder{
+    margin: .5rem;
+}
+.input-holder input{
+    height: 2.7rem;
+    padding-left: 1rem;
+    background-color: #f6f6f6;
+    outline: 1.5px solid transparent;
+    border: 0px;
+    padding: 0rem 2rem;
+    border-radius: 1rem;
+    border: 2px solid #8080807a;
+    transition: all .3s;
+}
+.input-holder input:focus{
+    border: 2px solid var(--primary-color);
+}
+.input-holder input::placeholder{
+    font-size: .8rem;
+    visibility: hidden;
+}
+.group{
+    margin: 1rem;
+}
+.sub-group{
+    margin: 0rem auto;
+    justify-content: space-between;
+}
+
+.line{
+    height: .1rem;
+    width: 100%;
+    background-color: #8080807a;
+}
+.or{
+    padding-block: 2rem;
+    font-weight: 700;
+    font-size: .8rem;
+}
+.or-text{
+    top: 50%;
+    left: 50%;
+    padding-inline: 1rem;
+    background-color: #f6f6f6;
+    transform: translate(-50%, -50%);
+}
+
+
+.pattern, .pattern1 {
+    background-size: cover;
+    height: 3rem;
+    width: 3rem;
+}
+
+
+.social-alt{
+    display: flex;
+    text-align: center;
+    height: 2.2rem;
+    width: 2.2rem;
+    color: white;
+    border-radius: 50%;
+    background-color: white;
+    transition: all .3s;
+}
+.social-alt:hover{
+    animation: alternate;
+    transform: scale(1.1);
+}
+.icons-alt{
+    width: 1.3rem;
+    height: 1.3rem;
+}
+.fill-alt{
+    width: 2.2rem;
+    height: 2.2rem;
+}
+.fb-alt{
+    background-color: #3b5998;
+    animation-delay: .3s;
+}
+.ig-alt{
+    background-color: #ec4d52;
+    animation-delay: .5s;
+}

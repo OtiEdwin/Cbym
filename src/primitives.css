@@ -167,11 +167,11 @@ hr{
 }
 .flex-left{
     display: flex;
-    justify-content: start !important;
+    justify-content: flex-start !important;
 }
 .flex-right{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 .absolute{
     position: absolute;
@@ -311,8 +311,8 @@ hr{
 .grey{
     color: gray;
 }
-.purple{
-    color: var(--primary-color);
+.primary-dark{
+    color: var(--primary-color-dark);
 }
 .dark{
     color: black;
