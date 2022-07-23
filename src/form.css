@@ -10,22 +10,19 @@
     min-height: 70vh;
     margin: auto;
     border-radius: 1rem;
-    background-image: linear-gradient(60deg , var(--primary-color--dark), var(--secondary-color) );
     box-shadow: .1px .1px 5px grey;
 }
 .form-background{
     background-image: url();
 }
 .form-inner{
-    width: 90%;
+    width: 100%;
     margin: auto;
-    padding-block: 2rem;
-
 }
 .form-register{
     width: 75%;
     margin: auto;
-    padding-block: 2rem;
+    padding: 2rem 0rem;
 }
 
 .form-img{
@@ -34,9 +31,10 @@
 }
 .login, .register{
     height: 100%;
-    padding: 5rem 5rem;
-    margin: auto;
+    padding: 2rem 5rem;
+    margin: 3rem auto;
     background-color: #f6f6f6;
+    box-shadow: 0px 1px 10px #0000004d;
 }
 .label{
     font-weight: 600;
@@ -44,7 +42,7 @@
     top: -20%;
     left: 8%;
     background-color: #f6f6f6;
-    padding-inline: .2rem;
+    padding: 0rem .35rem;
 }
 .input-holder{
     margin: .5rem;
@@ -61,7 +59,7 @@
     transition: all .3s;
 }
 .input-holder input:focus{
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--primary-color-dark);
 }
 .input-holder input::placeholder{
     font-size: .8rem;
@@ -81,14 +79,14 @@
     background-color: #8080807a;
 }
 .or{
-    padding-block: 2rem;
+    padding: 2rem 0rem;
     font-weight: 700;
     font-size: .8rem;
 }
 .or-text{
     top: 50%;
     left: 50%;
-    padding-inline: 1rem;
+    padding: 0rem 1rem;
     background-color: #f6f6f6;
     transform: translate(-50%, -50%);
 }
@@ -103,6 +101,7 @@
 
 .social-alt{
     display: flex;
+    flex-wrap: wrap;
     text-align: center;
     height: 2.2rem;
     width: 2.2rem;

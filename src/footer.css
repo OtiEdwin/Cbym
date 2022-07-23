@@ -1,0 +1,89 @@
+/* THE FOOTER */
+
+.foot{
+    min-height: 60vh;
+    background-image: linear-gradient(to right, rgb(14 25 34),rgb(14 25 34 / 85%)), url(../foot.jpeg);
+    background-size: cover;
+    color: white;
+    margin-bottom: 0;    
+}
+.foot h3{
+    font-size: 1.5rem;
+    margin-left: 0rem;
+}
+
+.foot li{
+    font-size: 1rem;
+    color: rgb(175, 173, 173);
+    width: max-content;
+    margin: .5rem;
+}
+.contact li:not(:last-child){
+    border-bottom: 1px solid gray;
+}
+.foot p{
+    margin: 1.5rem auto;
+}
+.input{
+    outline: 0px;
+    outline-offset: .2rem;
+    transition: all .3s;
+    border: 0px;
+    height: 3.5rem;
+    width: 18rem;
+    padding-left: 2rem;
+}
+.input:focus{
+    outline: 2px solid var(--primary-color);
+}
+.inner{
+    background-color: var(--primary-color);
+    color: white;
+    margin: 1rem 0;
+    border-radius: 3px;
+
+    right: 3%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    margin: 0;    
+}
+.two{
+    max-width: 15rem;
+}
+.two li{
+    font-size: 1rem;
+    margin: 1.5rem auto 1.5rem 0;
+}
+
+.stand-out{
+    color: white;
+    font-size: 1.2rem;
+    margin: .5rem 0rem !important;
+}
+.stand-in{
+    color: rgb(175 173 173);
+}
+.ms-2{
+    margin-top: 2%;
+}
+.foot-foot{
+    background-color: var(--primary-color-dark);
+    width: 100%;
+    height: rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: auto;
+    margin: 0 auto;
+}
+.cbym{
+    width: 30%;
+}
+
+.btns{
+    padding: .7rem 1.5rem;
+    width: fit-content;
+    margin: auto 0;
+    transition: all .3s;
+    cursor: pointer;
+}
