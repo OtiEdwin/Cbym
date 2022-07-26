@@ -14,13 +14,13 @@ function App() {
   return (
     <>
       <Header/>
-      {/* <Home/> */}
-      {/* <Section_1/> */}
+      <Home/>
+      {/* <Section_1/>
       <Section_2/>
       <Section_3/>
-      <Section_4/>
+      <Section_4/> */}
       {/* <Login/> */}
-      <Signup/>
+      {/* <Signup/> */}
       <Footer/>
     </>
     

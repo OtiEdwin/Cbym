@@ -1,17 +1,24 @@
 import Navigation from './Navigation';
 import './primitives.css';
+import React, {useState} from 'react'
 
 function Header() {
+    const [toggle, setToggle] = useState(1)
+
     return(
         <header>
-            <Navigation/>
-            {/* <ul className=" toggle col " >
-                <li><a>home</a></li>
-                <li><a>log-out</a></li>
-                <li><a>sign-up</a></li>
-                <li><a>about</a></li>
-                <li><a>contact us</a></li>
-            </ul> */}
+            <Navigation doSomething={ ()=>{setToggle((toggle + 1)%2)} }/>
+            <div className="toggle col primary-dark responsive" style={{ opacity: 1-toggle , transform: `translate(${ 100* toggle }%)` }}>
+                <ul className='container' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                    <div className='tr ex'>&#10005;</div>
+                    <li><a>home</a></li>
+                    <li><a>log-out</a></li>
+                    <li><a>sign-up</a></li>
+                    <li><a>about</a></li>
+                    <li><a>contact us</a></li>
+                </ul>
+            </div>
+
 
             <div className='row page head'>
                 <div className='ratio-5 col'>

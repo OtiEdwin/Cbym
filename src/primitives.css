@@ -30,8 +30,8 @@ body{
 body::-webkit-scrollbar{
     width: .7rem;
     position: absolute;
-    border: 1px solid var(--primary-color-dark);
-    background: var(--primary-color-dark);
+    border: 1px solid var(--primary-color);
+    background: var(--primary-color);
 }
 body::-webkit-scrollbar-thumb{
     background-color: black;
@@ -48,9 +48,9 @@ header, section, footer {
     margin: auto;
 }
 header{
-    min-height: 100vh;
-    background-image: linear-gradient(to right, #000000bf, #000000bf),url('../chair.jpg');
-    background-size: contain;
+    min-height: fit-content;
+    background-image: linear-gradient(to right, #000000bf, #000000bf),url(../chair.jpg);
+    background-size: cover;
     overflow-x: hidden;
     color: var(--primary-text-color);
 }
@@ -124,6 +124,10 @@ hr{
     border-color: transparent;
     background-color: var(--primary-color);
 }
+button, button:focus{
+    border: 0px;
+    outline: 0px;
+}
 
 .primary{
     color: var(--primary-color);
@@ -135,10 +139,10 @@ hr{
     color: var(--tertiary-color);
 }
 .responsive{
-    display: none;
+    display: none !important;
 }
 .anti-responsive{
-    display: flex;
+    display: flex !important;
 }
 .mc{
     margin: auto;
@@ -375,23 +379,32 @@ hr{
 }
 .gray-background{
     background-color: #e6e6e6;
-    min-height: 20rem;
+    min-height: 30rem;
     padding: 2rem 2.5rem;
 }
 .green-background{
     background-color: green;
-    min-height: 20rem;
+    min-height: 30rem;
     padding: .1rem .5rem;
 }
 .w-background{
     background-color: white;
-    min-height: 20rem;
+    min-height: 30rem;
     padding: .1rem .5rem;
 }
 .g-background{
     background-color: #e6e6e6;
-    min-height: 20rem;
+    min-height: 30rem;
     padding: .1rem .5rem;
+}
+.toggle{
+    transition: all .3s;
+}
+.form-width{
+    width: 54%;
+    border: 2px solid #bebebe;
+    border-radius: 15px;
+    margin: 1rem auto 2rem auto;
 }
 
 
@@ -437,18 +450,18 @@ hr{
 }
 .board3{
     background-color: var(--primary-color-dark);
-    height: 15rem;
+    height: 25rem;
 }
 .board4{
     background-color: var(--secondary-color);
-    height: 15rem;
+    height: 25rem;
 }
 .board5{
     background-color: var(--tertiary-color);
-    height: 15rem;
+    height: 25rem;
 }
 .outline:hover{
-    width: 40%;
+    width: 47%;
     outline-offset: 1.2rem;
     outline: .5rem solid var(--primary-color);
     z-index: 3;
@@ -473,19 +486,19 @@ hr{
     right: 50%;
 }
 .img4{
-    width: 35%;
-    top: -4%;
-    left: 10%;
+    width: 45%;
+    top: -6%;
+    left: 4%;
     z-index: 1;
 }
 .img5{
-    width: 35%;
-    bottom: -4%;
-    right: 10%;
+    width: 45%;
+    bottom: -6%;
+    right: 4%;
     z-index: 1;
 }
 .img6{
-    width: 35%;
+    width: 45%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -548,7 +561,9 @@ hr{
 
 
 
-
+.details{
+    width: 100%;
+}
 
 
 
@@ -579,18 +594,25 @@ hr{
 
 @media (max-width:700px) {
     .anti-responsive{
-        display: none;
+        display: none !important;
     }
     .responsive{
-        display: flex;
+        display: flex !important;
     }
     .ratio-2, .ratio-3, .ratio-4, .ratio-5, .ratio-6, .ratio-7, .ratio-8, .ratio-9, .ratio-10{
         width: 100%;
         margin: 1rem 2.5rem;
     }
-    p{
+    .form-width{
+        width: 90%;
+    }
+    .input-holder textarea {
+        width: 100% !important;
+    }
+    p, .foot p, .foot li, .contact li{
         font-size: 1.4rem;
     }
+    
 
     header {
     min-height: 85vh;
@@ -634,6 +656,18 @@ hr{
     .contact h3{
         padding-bottom: 1rem;
     }
+
+
+    .img1 {
+        top: 30%;
+        left: 50%;
+        z-index: 1;
+    }
+
+    .img3 {
+        bottom: 20%;
+        right: 30%;
+    }
 }
 
 
@@ -641,10 +675,12 @@ hr{
 @media (max-width:500px) {
 
     .h1-alt{
-        font-size: 3rem;
+        font-size: 2.7rem;
+        margin: 1.5rem 0;
     }
     h1{
-        font-size: 3em;
+        font-size: 2.7em;
+        margin: 1.5rem 0;
     }
     h3{
         font-size: 1.5em;
@@ -671,7 +707,7 @@ hr{
     hr{
         width: 10%;
         height: .15rem;
-        margin: 1.2rem 0;
+        margin: 1rem 0 1.5rem 0;
     }
 
 

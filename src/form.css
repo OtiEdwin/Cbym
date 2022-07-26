@@ -44,24 +44,38 @@
     background-color: #f6f6f6;
     padding: 0rem .35rem;
 }
-.input-holder{
-    margin: .5rem;
+.text-label{
+    font-weight: 600;
+    font-size: 0.75rem;
+    top: -4%;
+    left: 8%;
+    background-color: #f6f6f6;
+    padding: 0rem .35rem;
 }
-.input-holder input{
+.input-holder{
+    margin: .8rem;
+}
+.input-holder input, .input-holder textarea{
     height: 2.7rem;
     padding-left: 1rem;
     background-color: #f6f6f6;
     outline: 1.5px solid transparent;
     border: 0px;
+    resize: none;
     padding: 0rem 2rem;
     border-radius: 1rem;
     border: 2px solid #8080807a;
     transition: all .3s;
 }
-.input-holder input:focus{
+.input-holder textarea{
+    height: 10rem;
+    width: 90%;
+}
+
+.input-holder input:focus, .input-holder textarea:focus{
     border: 2px solid var(--primary-color-dark);
 }
-.input-holder input::placeholder{
+.input-holder input::placeholder, .input-holder textarea::placeholder {
     font-size: .8rem;
     visibility: hidden;
 }

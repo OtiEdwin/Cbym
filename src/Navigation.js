@@ -2,7 +2,7 @@
 import './navigation.css'
 import './primitives.css'
 
-const Navigation = () => {
+const Navigation = ({doSomething}) => {
     return(
         <>
             <nav className="navigation navbar">
@@ -17,7 +17,7 @@ const Navigation = () => {
                     <li><a href='#subscribe'>about</a></li>
                     <li><a className="btn hollow" href='#foot'>contact us</a></li>
                 </ul>
-                <div className="toggler relative responsive">
+                <div className="toggler relative responsive" onClick={doSomething}>
                     <div className= "slim absolute top"></div>
                     <div className="slim absolute bottom"></div>
                 </div>

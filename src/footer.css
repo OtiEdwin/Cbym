@@ -13,13 +13,12 @@
 }
 
 .foot li{
-    font-size: 1rem;
     color: rgb(175, 173, 173);
     width: max-content;
     margin: .5rem;
 }
 .contact li:not(:last-child){
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #80808057;
 }
 .foot p{
     margin: 1.5rem auto;
@@ -51,7 +50,6 @@
     max-width: 15rem;
 }
 .two li{
-    font-size: 1rem;
     margin: 1.5rem auto 1.5rem 0;
 }
 
