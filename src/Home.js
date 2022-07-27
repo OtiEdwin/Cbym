@@ -1,5 +1,5 @@
 import Newslist from './NewsList'
-import Admin from './Admin'
+import Admin from './Post'
 
 import './primitives.css'
 

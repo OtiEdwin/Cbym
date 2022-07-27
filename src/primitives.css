@@ -49,7 +49,7 @@ header, section, footer {
 }
 header{
     min-height: fit-content;
-    background-image: linear-gradient(to right, #000000bf, #000000bf),url(../chair.jpg);
+    background-image: linear-gradient(to right, #000000f5, #000000bf),url(../headimg.jpg);
     background-size: cover;
     overflow-x: hidden;
     color: var(--primary-text-color);
@@ -111,6 +111,9 @@ h4{
 .h4{
     color:black;
     font-weight: 100;
+}
+h6{
+    font-weight: 300;
 }
 li{
     list-style: none;
@@ -324,6 +327,7 @@ button, button:focus{
 .pill{
     border-radius: 500px;
     border: 2px solid white;
+    margin: auto;
 }
 .gradient{
     padding: .7rem 1rem;
@@ -473,7 +477,7 @@ button, button:focus{
     z-index: 3;
 }
 .img1{
-    top: 30%;
+    top: 28%;
     left: 40%;
     z-index: 1
 }
@@ -482,7 +486,7 @@ button, button:focus{
     left: 5%;
 }
 .img3{
-    bottom: 20%;
+    bottom: 15%;
     right: 50%;
 }
 .img4{
@@ -564,8 +568,27 @@ button, button:focus{
 .details{
     width: 100%;
 }
+.admin{
+    z-index: 200;
+    height: 100vh;
+    width: 100vw;
+    background-color: #00000080;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+.hydrated {
+    visibility: inherit;
 
 
+}
+.md{
+    width: 2rem;
+    height: 2rem;      
+    margin: auto;    
+}
+  
 
 
 
@@ -710,7 +733,9 @@ button, button:focus{
         margin: 1rem 0 1.5rem 0;
     }
 
-
+    .toggle {
+        min-width: 65% !important;
+    }
 
 }
 

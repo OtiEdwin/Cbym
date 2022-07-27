@@ -19,14 +19,14 @@ const Login = () => {
                         <div className="group col">
                             <div className="input-holder col relative">
                                 <label for="email" className="primary-dark label absolute">Email *</label>
-                                <input type="email" name="email" id="email" placeholder="Type your email"/>  
+                                <input type="email" name="email" id="email"/>  
                                 
                                 <ion-icon name="people" className="md hydrated password left absolute"></ion-icon>                               
                             </div>
 
                             <div className="input-holder col relative">
                                 <label for="password" className="primary-dark label absolute">Password *</label>
-                                <input type="password" name="password" id="password" placeholder="Type your password"/> 
+                                <input type="password" name="password" id="password"/> 
 
                                 <ion-icon name="key" className="md hydrated password left absolute"></ion-icon>                               
                                 <ion-icon name="eye" className="md hydrated password eye-on right absolute"></ion-icon>                               

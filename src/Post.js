@@ -1,7 +1,7 @@
 
 import './primitives.css'
 
-function Admin() {
+function Post() {
 
 
     return(
@@ -26,4 +26,4 @@ function Admin() {
         </>
     )
 }
-export default Admin
+export default Post

@@ -36,9 +36,9 @@ function Footer() {
                 <h3><span className='primary h3'>&mdash;</span> Contact</h3>
                 <ul>
                 <li className='row flex-left'>
-                    {/* <span class="material-symbols-outlined mbc primary md-36">
+                    <span class="material-symbols-outlined mbc primary md-36">
                     phone_in_talk
-                    </span> */}
+                    </span>
                     <div className='pa-l'>
                     Call Us
                     <p className='stand-out'>09037467367</p>
@@ -47,9 +47,9 @@ function Footer() {
                 </li>
     
                 <li className='row flex-left'>
-                    {/* <span class="material-symbols-outlined mbc primary md-36">
+                    <span class="material-symbols-outlined mbc primary md-36">
                     forward_to_inbox
-                    </span> */}
+                    </span>
                     <div className='pa-l'>
                     Send an Email
                     <p className='stand-out'>example@email.com</p>
@@ -58,9 +58,9 @@ function Footer() {
                 </li>
     
                 <li className='row flex-left'>
-                    {/* <span class="material-symbols-outlined mbc primary md-36">
+                    <span class="material-symbols-outlined mbc primary md-36">
                     explore
-                    </span> */}
+                    </span>
                     <div className='pa-l'>
                     Leave a message
                     <p className='stand-out'>09037467367</p>

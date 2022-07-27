@@ -19,14 +19,14 @@ const Signup = () => {
                         <div className="group col">
                             <div className="input-holder col relative">
                                 <label for="email" className="primary-dark label absolute">Email *</label>
-                                <input type="email" name="email" id="email" placeholder="Type your email"/>  
+                                <input type="email" name="email" id="email" />  
                                 
                                 <ion-icon name="people" className="md hydrated password left absolute"></ion-icon>                               
                             </div>
 
                             <div className="input-holder col relative">
                                 <label for="full-name" className="primary-dark label absolute"> Full Name *</label>
-                                <input type="text" name="full name" id="full-name" placeholder="Enter your full name"/>                               
+                                <input type="text" name="full name" id="full-name"/>                               
                             </div>
                             <a href="#home" className="tr primary-dark label">Registered Already ?</a>                             
                         </div>

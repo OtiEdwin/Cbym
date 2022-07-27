@@ -3,7 +3,7 @@ import './primitives.css'
 const Section_4 = () =>{
     return(
         <section className="page col">
-            <h2 className='tc mc head-text'><span className='dark h2'>&mdash;</span> A safe space</h2>
+            <h2 className='tc mc head-text'><span className='dark h2'>&mdash;</span> Naija Youths Arise</h2>
                    
             <div className="row relative  gray-background">
                 <div className="ratio-5">

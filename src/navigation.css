@@ -50,6 +50,7 @@
     text-transform: capitalize;
     color: black;
     font-weight: 700;
+    box-shadow: 0 0 1.5px grey;
 }
 .container{
     margin: 1rem 1rem auto 1rem;
@@ -58,7 +59,8 @@
 .toggle li{
     margin: 1rem auto auto auto;
     width: 90%;
-    padding: 2rem 1rem;
+    display: flex;
+    padding: 1.2rem 1rem;
     transition: all .3s;
     border-left: 3px solid transparent;
     box-shadow: 0 0 1.5px grey;
@@ -69,18 +71,19 @@
     color: var(--primary-color-dark);
 }
 .ex{
+    width: -moz-fit-content;
     width: fit-content;
     cursor: pointer;
-    color: var(--primary-color-dark);
-    margin: 0rem 1rem;
-    font-size: 2.5rem;
+    color: #e80909;
+    margin: 0.5rem 1.5rem;
+    font-size: 2rem;
     font-weight: 900;
     margin-left: auto;
 }
 .toggle li:hover {
     transform: scale(1);
-    color: var(--primary-color);
-    border-left: 3px solid var(--primary-color);
+    color: var(--primary-color-dark);
+    border-left: 3px solid var(--primary-color-dark);
 }
 .toggler {
     margin: auto 1rem;
@@ -102,4 +105,22 @@
 .bottom{
     bottom: 0%;
     right: 0%;
+}
+.nav-icon-shell{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    transition: all .3s;
+}
+.nav-icon-shell:hover{
+    background-color: rgb(0 224 178 / 16%);
+}
+
+.nav-font-icon{
+    margin: auto;
+    width: fit-content;
+    color: var(--primary-color-dark);
+    line-height: 2.5rem;
+    font-size: 2.5rem;
+    text-align: center;
 }
