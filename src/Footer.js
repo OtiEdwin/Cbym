@@ -17,17 +17,16 @@ function Footer() {
                 <div className='row space-btw two'>
                 <div>
                     <ul>
-                    <li><Link to = ''>Donate</Link></li>
-                    <li><Link to = ''>Campaign</Link></li>
-                    <li><Link to = ''>Fundraisers</Link></li>
+                    <li><Link to = {`https://api.whatsapp.com/send?phone=2347039339152&text=Hello,+i'd+like+to+make+a+donation`}>Donate</Link></li>
+                    <li><Link to = {`https://api.whatsapp.com/send?phone=2347039339152&text=Hello,+i'd+like+to+make+more+enquires+about+CBYM+campaigns`}>Campaign</Link></li>
+                    <li><Link to = {`https://api.whatsapp.com/send?phone=2347039339152&text=Hello,+i'd+like+to+know+more+about+CBYM+fundraisers`}>Fundraisers</Link></li>
                     <li><Link to = ''>Sponsors</Link></li>
                     </ul>
                 </div>
                 <div>
                     <ul>
-                    <li><Link to = ''>Contact</Link></li>
+                    <li><Link to = {`https://api.whatsapp.com/send?phone=2347039339152`}>Contact</Link></li>
                     <li><Link to = ''>Help</Link></li>
-                    <li><Link to = ''>FAQs</Link></li>
                     </ul>
                 </div>
                 </div>
@@ -41,7 +40,7 @@ function Footer() {
                     </span>
                     <div className='pa-l'>
                     Call Us
-                    <Link to = '' className='stand-out'>09037467367</Link>
+                    <Link to = '' className='stand-out'>07039339152</Link>
                     </div>
                     
                 </li>
@@ -63,7 +62,7 @@ function Footer() {
                     </span>
                     <div className='pa-l'>
                     Leave a message
-                    <Link to = '' className='stand-out'>09037467367</Link>
+                    <Link to = {`https://api.whatsapp.com/send?phone=2347039339152`} className='stand-out'>+234 703 933 9152</Link>
                     </div>
                         
                 </li>
@@ -80,7 +79,7 @@ function Footer() {
                     <li><Link to = ''><ion-icon name="logo-facebook" class='bg mbc hydrated white'></ion-icon></Link></li>
                     <li><Link to = ''><ion-icon name="logo-instagram" class='bg mbc hydrated white'></ion-icon></Link></li>
                     <li><Link to = ''><ion-icon name="logo-twitter" class='bg mbc hydrated white'></ion-icon></Link></li>
-                    <li><Link to = ''><ion-icon name="logo-whatsapp" class='bg mbc hydrated white'></ion-icon></Link></li>
+                    <li><Link to = {`https://api.whatsapp.com/send?phone=2347039339152`}><ion-icon name="logo-whatsapp" class='bg mbc hydrated white'></ion-icon></Link></li>
                 </ul>
                 </div>
             </div>
