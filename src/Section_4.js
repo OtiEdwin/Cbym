@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './primitives.css'
 
 const Section_4 = () =>{
@@ -9,21 +10,16 @@ const Section_4 = () =>{
                 <div className="ratio-5">
                     <div className="box tl col slide-left tert">
                         <div className="section-p row">
-                            <h4 className='section-h4 primary-dark ml-0'>What do we offer ?</h4>
+                            <h4 className='section-h4 primary-dark ml-0'>Let's make the right Choice</h4>
                             <div className="sub_section-p">
-                                <p>CBYM offers a safe space for like minded youths to digest useful information pertaining to the movement of the association and it's goals</p>
+                                <p>Despite all we have been through in these trying times, Now is the time for us to unite and choose the right Leader for our Nation.</p>
                             </div>
                         </div>
-                        <a className="btn hollow-dark tr">Yeah, i'm in &rarr;</a>
+                        <Link to = '/Signup' className="btn hollow-dark tr">Yeah, i'm in &rarr;</Link>
                     </div>
                 </div>
 
                 <div className="ratio-5 relative board5">
-                    <div className="mc slide-right">
-                        <img src="stock0.jpeg" alt="a safe space for lagos youths" className="img4 absolute outline"/>                    
-                        <img src="stock1.jpeg" alt="a safe space for lagos youths" className="img5 absolute outline"/>                    
-                        <img src="stock2.jpeg" alt="a safe space for lagos youths" className="img6 absolute outline"/>                    
-                    </div>
                 </div>                
             </div>
         </section>

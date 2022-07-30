@@ -2,19 +2,21 @@
 
 .foot{
     min-height: 60vh;
-    background-image: linear-gradient(to right, rgb(14 25 34),rgb(14 25 34 / 85%)), url(../foot.jpeg);
-    background-size: cover;
+    background-image: linear-gradient(to right, rgb(14 25 34),rgb(14 25 34 / 95%)), url(../footerimg.png);
     color: white;
-    margin-bottom: 0;    
+    background-size: cover;
+    overflow: hidden;
+    margin-bottom: 0; 
 }
 .foot h3{
     font-size: 1.5rem;
     margin-left: 0rem;
 }
 
-.foot li{
+.foot li a{
     color: rgb(175, 173, 173);
     width: max-content;
+    display: flex;
     margin: .5rem;
 }
 .contact li:not(:last-child){

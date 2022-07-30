@@ -1,86 +1,114 @@
 import Navigation from './Navigation';
+import Navcontent from './Navcontent'
 import './primitives.css';
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
-function Header() {
-    const [toggle, setToggle] = useState(1)
+
+function Header({ is_logged_in, display}) {
+    const [ toggle, setToggle ] = useState(1)
 
     return(
         <header>
-            <Navigation doSomething={ ()=>{setToggle((toggle + 1)%2)} }/>
+            <Navigation doSomething = { ()=>{setToggle((toggle + 1)%2)} } is_logged_in = { is_logged_in }/>
+            
             <div className="toggle col primary-dark responsive" style={{ opacity: 1-toggle , transform: `translate(${ 100* toggle }%)` }}>
                 <ul className='container'>
-                    <div className='tr ex' onClick={ ()=>{setToggle((toggle + 1)%2)} }> <ion-icon name="close"></ion-icon> </div>
-                    <li className='space-btw'>
-                        <a href='#'  className='mbc'>Home</a>
-                        <div className='nav-icon-shell flex-center'>
-                            <ion-icon name="home"></ion-icon>
-                        </div>
+                    <div className='tr ex' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                        <div className='nav-icon-shell-alt flex-center'>
+                            <ion-icon name="close"></ion-icon>
+                        </div> 
+                     
+                    </div>
+                    <li className=''>
+                        <Link to='/' className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                            Home
+                            <div className=' flex-center'>
+                                <ion-icon name="home"></ion-icon>
+                            </div>
+                        </Link>
                     </li>
-                    <li className='space-btw'>
-                        <a href='#'  className='mbc'>Latest</a>
-                        <div className='nav-icon-shell flex-center'>
-                            <ion-icon name="globe"></ion-icon>
-                        </div>
+                    <li className=''>
+                        <Link to='/home'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                            Latest
+                            <div className=' flex-center'>
+                                <ion-icon name="globe"></ion-icon>
+                            </div>
+                        </Link>
                     </li>
-                    <li className='space-btw'>
-                        <a href='#subscribe'  className='mbc'>Subscribe</a>
-                        <div className='nav-icon-shell flex-center'>
-                            <ion-icon name="list-box"></ion-icon>
-                        </div>
+                    <li className=''>
+                        <Link to='/Signup'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                            Subscribe
+                            <div className=' flex-center'>
+                                <ion-icon name="paper-plane"></ion-icon>
+                            </div>
+                        </Link>
                     </li>
-                    <li className='space-btw'>
-                        <a href='#subscribe'  className='mbc'>About</a>
-                        <div className='nav-icon-shell flex-center'>
-                            <ion-icon name="help-circle"></ion-icon>
-                        </div>
+                    <li className=''>
+                        <Link to='/About'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                            About
+                            <div className=' flex-center'>
+                                <ion-icon name="help-circle"></ion-icon>
+                            </div>
+                        </Link>
                     </li>
-                    <li className='space-btw'>
-                        <a href='#'  className='mbc'>Admin Login</a> 
-                        <div className='nav-icon-shell flex-center'>
-                            <ion-icon name="log-in"></ion-icon>
-                        </div>
+                    <li className=''>
+                        <Link to='/Login'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                            Admin Login
+                            <div className=' flex-center'>
+                                <ion-icon name="log-in"></ion-icon>
+                            </div>                        
+                        </Link> 
+
                     </li>
-                    <li className='space-btw'>
-                        <a href='#' className='mbc'>Add Admin</a> 
-                        <div className='nav-icon-shell flex-center'>
-                            <ion-icon name="add"></ion-icon>
-                        </div>
+                    <li className=''>
+                        <Link to='/admin' className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                            Add Admin 
+                            <div className=' flex-center'>
+                                <ion-icon name="add"></ion-icon>
+                            </div>
+                        </Link>
                     </li> 
-                    <li className='space-btw'>
-                        <a href='#' className='mbc'>Contact us</a>
-                        <div className='nav-icon-shell flex-center'>
-                            <ion-icon name="contact"></ion-icon>
-                        </div>
+                    <li className=''>
+                        <Link to='/Footer' className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                            Contact us
+                            <div className=' flex-center'>
+                                <ion-icon name="call"></ion-icon>
+                            </div>
+                        </Link>
                     </li>
                 </ul>
             </div>
-{/* style={{display: 'none'}} */}
+            
+            {
+                display?(
+                    <div className={`row page head `}>
+                        <div className='ratio-5 col'>
+                            <h1 className='tl'>
+                            All hands on deck, Let's change the fate of <span className='green h1-alt'>Ni</span>ger<span className='h1-alt green'>ia</span>
+                            </h1>
+                            <hr/>
+                            <h3><span className='primary h3'>C</span>ity <span className='primary h3'>B</span>oy <span className='primary h3'>Y</span>outh <span className='primary h3'>M</span>ovement</h3>          
+                            <br/>  
+                            <Link to = '/Signup' className='btn hollow'>Join us Today &rarr;</Link>
+                        </div>
 
-            <div className='row page head' >
-                <div className='ratio-5 col'>
-                    <h1 className='tl'>
-                    All hands on deck, Let's change the fate of <span className='green h1-alt'>Ni</span>ger<span className='h1-alt green'>ia</span>
-                    </h1>
-                    <hr/>
-                    <h3><span className='primary h3'>C</span>ity <span className='primary h3'>B</span>oy <span className='primary h3'>Y</span>outh <span className='primary h3'>M</span>ovement</h3>          
-                    <br/>  
-                    <a className='btn hollow'>
-                    Join us Today &rarr;
-                    </a>
-                </div>
+                        <div className='ratio-3 head ml1 relative stock-holder'>
+                            <img src='stock2.jpg' alt='' className='absolute outline-alt img1'/>
+                            <img src='stock8.png' alt='' className='absolute outline-alt img2'/>
+                            <img src='stock0.jpg' alt='' className='absolute outline-alt img3'/>
+                            <div className='board1 absolute'></div>
+                            <div className='board2 absolute'></div>
+                        </div>
+                    </div>                    
+                )   
+                :<></>
+            }
+            
 
-                <div className='ratio-3 head ml1 relative stock-holder'>
-                    <img src='stock2.jpg' alt='' className='absolute outline-alt img1'/>
-                    <img src='stock1.jpg' alt='' className='absolute outline-alt img2'/>
-                    <img src='stock0.jpg' alt='' className='absolute outline-alt img3'/>
-                    <div className='board1 absolute'></div>
-                    <div className='board2 absolute'></div>
-                </div>
-
-            </div>
         </header>
     )
 }
-export default Header
 
+
+export default Header;

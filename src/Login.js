@@ -1,10 +1,29 @@
 // import { ReactDOM } from "react"
 // import './navigation.css'
+import { useState } from 'react'
 import './form.css'
 import './primitives.css'
 
 const Login = () => {
-    return(
+    const [ visibility, setVisibility ] = useState('eye-off')
+    const [passValue, setPassValue] = useState('password')
+    function setPassword(){
+        if(visibility == 'eye-off'){
+            setVisibility('eye')
+        }
+        else{
+            setVisibility('eye-off')
+        }
+        
+
+        if(passValue=='password'){
+            setPassValue('passcode')
+        }
+        else{
+            setPassValue('password')
+        }
+    }
+    return( 
         <>
         <div className="page-full">
             <div className="form-holder col">
@@ -21,16 +40,19 @@ const Login = () => {
                                 <label for="email" className="primary-dark label absolute">Email *</label>
                                 <input type="email" name="email" id="email"/>  
                                 
-                                <ion-icon name="people" className="md hydrated password left absolute"></ion-icon>                               
+                                <ion-icon name="people" class="bg hydrated password left absolute"></ion-icon>                               
                             </div>
 
                             <div className="input-holder col relative">
-                                <label for="password" className="primary-dark label absolute">Password *</label>
-                                <input type="password" name="password" id="password"/> 
+                                <label for="password" class="primary-dark label absolute">Password *</label>
+                                <input type={ passValue } name="password" id="password"/> 
 
-                                <ion-icon name="key" className="md hydrated password left absolute"></ion-icon>                               
-                                <ion-icon name="eye" className="md hydrated password eye-on right absolute"></ion-icon>                               
-                                <ion-icon name="eye-off" className="md hydrated password eye-off right absolute"></ion-icon>                               
+                                <ion-icon name="key" class="bg hydrated password left absolute"></ion-icon> 
+                                <div className='eye-container nav-icon-shell right absolute flex-center' onClick={setPassword}>
+                                    <ion-icon name={visibility} class="bg hydrated password eye-on"></ion-icon>                                    
+                                </div>                              
+                               
+                               
                             </div>
                             <a href="#" className="tr primary-dark label">forgot password ?</a>                             
                         </div>
@@ -41,9 +63,7 @@ const Login = () => {
 
                         <div className="or relative">
                         <div className="line"></div>
-                        <p className="tc primary-dark absolute or-text"> or </p>                                
                         </div> 
-
                     </form>
                 </div>
             </div>

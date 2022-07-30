@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './footer.css'
 import './primitives.css'
 
@@ -16,18 +17,17 @@ function Footer() {
                 <div className='row space-btw two'>
                 <div>
                     <ul>
-                    <li>Donate</li>
-                    <li>Campaign</li>
-                    <li>Fundraisers</li>
-                    <li>Fundraisers</li>
-                    <li>Sponsors</li>
+                    <li><Link to = ''>Donate</Link></li>
+                    <li><Link to = ''>Campaign</Link></li>
+                    <li><Link to = ''>Fundraisers</Link></li>
+                    <li><Link to = ''>Sponsors</Link></li>
                     </ul>
                 </div>
                 <div>
                     <ul>
-                    <li>Contact</li>
-                    <li>Help</li>
-                    <li>FAQs</li>
+                    <li><Link to = ''>Contact</Link></li>
+                    <li><Link to = ''>Help</Link></li>
+                    <li><Link to = ''>FAQs</Link></li>
                     </ul>
                 </div>
                 </div>
@@ -41,7 +41,7 @@ function Footer() {
                     </span>
                     <div className='pa-l'>
                     Call Us
-                    <p className='stand-out'>09037467367</p>
+                    <Link to = '' className='stand-out'>09037467367</Link>
                     </div>
                     
                 </li>
@@ -52,7 +52,7 @@ function Footer() {
                     </span>
                     <div className='pa-l'>
                     Send an Email
-                    <p className='stand-out'>example@email.com</p>
+                    <Link to = '' className='stand-out'>example@email.com</Link>
                     </div>
                     
                 </li>
@@ -63,7 +63,7 @@ function Footer() {
                     </span>
                     <div className='pa-l'>
                     Leave a message
-                    <p className='stand-out'>09037467367</p>
+                    <Link to = '' className='stand-out'>09037467367</Link>
                     </div>
                         
                 </li>
@@ -71,16 +71,16 @@ function Footer() {
             </div>
             </div>
             <div className='foot-foot row'>
-            <div className='row ratio-2'>
+            <div className='row ratio-4'>
                 <div className='ratio-5 prm-background row'>
                 <h3>CBYM</h3>
                 </div>
                 <div className='ratio-5'>
                 <ul className='row'>
-                    <li><ion-icon name="logo-facebook" class='md hydrated white'></ion-icon></li>
-                    <li><ion-icon name="logo-instagram" class='md hydrated white'></ion-icon></li>
-                    <li><ion-icon name="logo-twitter" class='md hydrated white'></ion-icon></li>
-                    <li><ion-icon name="logo-whatsapp" class='md hydrated white'></ion-icon></li>
+                    <li><Link to = ''><ion-icon name="logo-facebook" class='bg mbc hydrated white'></ion-icon></Link></li>
+                    <li><Link to = ''><ion-icon name="logo-instagram" class='bg mbc hydrated white'></ion-icon></Link></li>
+                    <li><Link to = ''><ion-icon name="logo-twitter" class='bg mbc hydrated white'></ion-icon></Link></li>
+                    <li><Link to = ''><ion-icon name="logo-whatsapp" class='bg mbc hydrated white'></ion-icon></Link></li>
                 </ul>
                 </div>
             </div>

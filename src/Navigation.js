@@ -2,24 +2,51 @@
 import './navigation.css'
 import './primitives.css'
 
-const Navigation = ({doSomething}) => {
+import { Link } from 'react-router-dom';
+
+function List ({ is_logged_in }){
     return(
         <>
-            <nav className="navigation navbar">
+            {
+                is_logged_in?(
+                    <ul className="navigation-list anti-responsive">
+                        <li><Link to='/home'>Posts</Link></li>
+                        <li><Link to='/About'>About</Link></li>
+                        <li><Link to='/home'>Logout</Link></li> 
+                        <li><Link to='/'>Add Admin</Link></li> 
+                    </ul>
+                )
+
+                :(
+                    <ul className="navigation-list anti-responsive">
+                        <li><Link to='/'>Home</Link></li>
+                        <li><Link to='/home'>Latest</Link></li>
+                        <li><Link to='Signup'>Subscribe</Link></li>
+                        <li><Link to='/'>About</Link></li>
+                        <li><Link to='/Login'>Admin Login</Link></li> 
+                        <li><Link to='/' className="btn hollow" >Contact us</Link></li>
+                    </ul>
+                )
+            }         
+        </>
+       
+    )
+
+}
+
+
+const Navigation = ({ doSomething, is_logged_in, style_jutsu }) => {
+
+    return(
+        <>
+            <nav className={ `navigation navbar ${ style_jutsu }` }>
             <div className="ratio-9 space-btw">
                 <div className="navigation-description">
                     <img src="" alt="CBYM-logo" className=""/>
                 </div>
-                <ul className="navigation-list anti-responsive">
-                    <li><a href='#'>Home</a></li>
-                    <li><a href='#'>Latest</a></li>
-                    <li><a href='#subscribe'>Subscribe</a></li>
-                    <li><a href='#subscribe'>About</a></li>
-                    <li><a href='#'>Admin Login</a></li> 
-                    <li><a href='#'>Add Admin</a></li> 
-                    <li><a className="btn hollow" href='#foot'>Contact us</a></li>
-                </ul>
 
+                <List is_logged_in = { is_logged_in } />
+                
                 <div className="toggler relative responsive" onClick={doSomething}>
                     <div className= "slim absolute top"></div>
                     <div className="slim absolute bottom"></div>

@@ -21,13 +21,21 @@ const Signup = () => {
                                 <label for="email" className="primary-dark label absolute">Email *</label>
                                 <input type="email" name="email" id="email" />  
                                 
-                                <ion-icon name="people" className="md hydrated password left absolute"></ion-icon>                               
+                                <ion-icon name="people" class="bg hydrated password left absolute"></ion-icon>                               
                             </div>
 
                             <div className="input-holder col relative">
-                                <label for="full-name" className="primary-dark label absolute"> Full Name *</label>
-                                <input type="text" name="full name" id="full-name"/>                               
+                                <label for="full-name" class="primary-dark label absolute"> Full Name *</label>
+                                <input type="text" name="full name" id="full-name"/> 
+                                <ion-icon name="create" class="bg hydrated password right absolute"></ion-icon>                             
                             </div>
+
+                            <div className="input-holder col relative">
+                                <label for="last-name" class="primary-dark label absolute"> last Name *</label>
+                                <input type="text" name="last name" id="last-name"/>  
+                                <ion-icon name="create" class="bg hydrated password right absolute"></ion-icon>                             
+                            </div>
+
                             <a href="#home" className="tr primary-dark label">Registered Already ?</a>                             
                         </div>
 
@@ -35,11 +43,9 @@ const Signup = () => {
                             <a className="gradient tc">REGISTER</a>
                         </div>
 
-                        {/* <div className="or relative">
+                        <div className="or relative">
                         <div className="line"></div>
-                        <p className="tc primary-dark absolute or-text"> or </p>                                
-                        </div>  */}
-
+                        </div> 
                     </form>
                 </div>
             </div>
