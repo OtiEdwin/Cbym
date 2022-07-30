@@ -6,11 +6,11 @@ import './primitives.css'
 function Footer() {
     return(
         <footer className='foot col space-btw'>
-            <div className='row'>
+            <div className='row mt-2'>
             <div className='ratio-2 col ms-2'>
                 <h3><span className='primary h3'>&mdash;</span> About</h3>
-                <p className='stand-in'>this is a brief description of what CBYM is about</p>
-                <a className='btns filled'>see more &rarr;</a>
+                <p className='stand-in'>All hands on deck, Let's change the fate of <span className='green'>Ni</span>ger<span className='green'>ia</span> &mdash; CBYM</p>
+                <Link to = '/feeds' className='btns filled'>see more &rarr;</Link>
             </div>
             <div className='ratio-2 col ms-2'>
                 <h3><span className='primary h3'>&mdash;</span> Explore</h3>

@@ -1,14 +1,12 @@
-// import { ReactDOM } from "react"
-// import './navigation.css'
 import './form.css'
 import './primitives.css'
 
-const Signup = () => {
+const Subscribe = () => {
     return(
         <>
         <div className="page-full" id = 'subscribe'>
             <div className="form-holder col">
-                <h2 className='tc mc head-text'><span className='dark h2'>&mdash;</span> Subscribe to our Newsletter</h2>
+                <h2 className='tc mc head-text-alt'><span className='dark h2'>&mdash;</span> Subscribe to our Newsletter</h2>
 
                 <div className="login relative">
                     <form action="" className=" form-inner col">
@@ -53,4 +51,4 @@ const Signup = () => {
         </>
     )
 }
-export default Signup
+export default Subscribe

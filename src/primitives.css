@@ -61,7 +61,7 @@ header, section, footer {
     margin: auto;
 }
 header{
-    min-height: 6rem;
+    min-height: 5rem;
     background-image: linear-gradient(to right, #000000f5, #000000bf),url(../headimg.jpg);
     background-size: cover;
     overflow-x: hidden;
@@ -203,6 +203,9 @@ button, button:focus{
 }
 .pa-l{
     padding: 0rem 1rem;
+}
+.mt-2{
+    margin-top: 2rem;
 }
 .left{
     left: 3%;
@@ -552,6 +555,10 @@ button, button:focus{
 .head-text{
     color: var(--primary-color-dark);
     margin: 3rem auto;
+}
+.head-text-alt{
+    color: var(--primary-color-dark);
+    margin: 1rem auto;
 }
 
 

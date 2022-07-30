@@ -27,7 +27,7 @@ const Login = () => {
         <>
         <div className="page-full">
             <div className="form-holder col">
-                <h2 className='tc mc head-text'><span className='dark h2'>&mdash;</span> Login to your Account</h2>
+                <h2 className='tc mc head-text-alt'><span className='dark h2'>&mdash;</span> Login to your Account</h2>
 
                 <div className="login relative">
                     <form action="" className=" form-inner col">

@@ -10,9 +10,9 @@ function List ({ is_logged_in }){
             {
                 is_logged_in?(
                     <ul className="navigation-list anti-responsive">
-                        <li><Link to='/home'>Posts</Link></li>
-                        <li><Link to='/About'>About</Link></li>
-                        <li><Link to='/home'>Logout</Link></li> 
+                        <li><Link to='/feeds'>Posts</Link></li>
+                        <li><Link to='/about'>About</Link></li>
+                        <li><Link to='/'>Logout</Link></li> 
                         <li><Link to='/'>Add Admin</Link></li> 
                     </ul>
                 )
@@ -20,11 +20,11 @@ function List ({ is_logged_in }){
                 :(
                     <ul className="navigation-list anti-responsive">
                         <li><Link to='/'>Home</Link></li>
-                        <li><Link to='/home'>Latest</Link></li>
-                        <li><Link to='Signup'>Subscribe</Link></li>
+                        <li><Link to='/feeds'>Latest</Link></li>
+                        <li><Link to='/subscribe'>Subscribe</Link></li>
                         <li><Link to='/'>About</Link></li>
-                        <li><Link to='/Login'>Admin Login</Link></li> 
-                        <li><Link to='/' className="btn hollow" >Contact us</Link></li>
+                        <li><Link to='/login'>Admin Login</Link></li> 
+                        <li><Link to={`https://api.whatsapp.com/send?phone=2347039339152`} className="btn hollow" >Contact us</Link></li>
                     </ul>
                 )
             }         

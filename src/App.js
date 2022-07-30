@@ -1,8 +1,8 @@
 import './App.css';
 import Header from './Header';
+import Feeds from './Feeds';
 import Login from './Login';
-import Signup from './Signup';
-import Home from './Home';
+import Subscribe from './Subscribe';
 import Section_1 from './Section_1'
 import Section_2 from './Section_2';
 import Section_3 from './Section_3';
@@ -17,7 +17,7 @@ import {
   Routes,
 } from 'react-router-dom';
 
-function Landing() {
+function Home() {
   return (
     <>
       <Section_2/>
@@ -46,10 +46,10 @@ function App() {
       </Routes>
 
       <Routes>
-        <Route path='/' element={ <Landing/> }/>
+        <Route path='/' element={ <Home/> }/>
         <Route path='/login' element={ <Login/> }/>
-        <Route path='/home' element={ <Home is_logged_in = { logged_in } /> }/>
-        <Route path='/signup' element={ <Signup/> }/>
+        <Route path='/feeds' element={ <Feeds is_logged_in = { logged_in } /> }/>
+        <Route path='/subscribe' element={ <Subscribe/> }/>
       </Routes>
 
       <Routes> <Route path='*' element={ <Footer/> }/> </Routes>

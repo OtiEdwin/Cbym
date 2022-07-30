@@ -29,7 +29,7 @@ function Header({ is_logged_in, display}) {
                         </Link>
                     </li>
                     <li className=''>
-                        <Link to='/home'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                        <Link to='/feeds'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
                             Latest
                             <div className=' flex-center'>
                                 <ion-icon name="globe"></ion-icon>
@@ -37,7 +37,7 @@ function Header({ is_logged_in, display}) {
                         </Link>
                     </li>
                     <li className=''>
-                        <Link to='/Signup'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                        <Link to='/subscribe'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
                             Subscribe
                             <div className=' flex-center'>
                                 <ion-icon name="paper-plane"></ion-icon>
@@ -45,7 +45,7 @@ function Header({ is_logged_in, display}) {
                         </Link>
                     </li>
                     <li className=''>
-                        <Link to='/About'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                        <Link to='/about'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
                             About
                             <div className=' flex-center'>
                                 <ion-icon name="help-circle"></ion-icon>
@@ -53,7 +53,7 @@ function Header({ is_logged_in, display}) {
                         </Link>
                     </li>
                     <li className=''>
-                        <Link to='/Login'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                        <Link to='/login'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
                             Admin Login
                             <div className=' flex-center'>
                                 <ion-icon name="log-in"></ion-icon>
@@ -90,7 +90,7 @@ function Header({ is_logged_in, display}) {
                             <hr/>
                             <h3><span className='primary h3'>C</span>ity <span className='primary h3'>B</span>oy <span className='primary h3'>Y</span>outh <span className='primary h3'>M</span>ovement</h3>          
                             <br/>  
-                            <Link to = '/Signup' className='btn hollow'>Join us Today &rarr;</Link>
+                            <Link to = '/subscribe' className='btn hollow'>Join us Today &rarr;</Link>
                         </div>
 
                         <div className='ratio-3 head ml1 relative stock-holder'>
