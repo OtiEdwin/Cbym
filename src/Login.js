@@ -54,7 +54,7 @@ const Login = () => {
                                
                                
                             </div>
-                            <a href="#" className="tr primary-dark label">forgot password ?</a>                             
+                            <a href="#" className="tr primary-dark label underline">forgot password ?</a>                             
                         </div>
 
                         <div className="group col">

@@ -1,5 +1,4 @@
 import Navigation from './Navigation';
-import Navcontent from './Navcontent'
 import './primitives.css';
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
@@ -62,20 +61,20 @@ function Header({ is_logged_in, display}) {
 
                     </li>
                     <li className=''>
-                        <Link to='/admin' className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                        <a href='#admin' className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
                             Add Admin 
                             <div className=' flex-center'>
                                 <ion-icon name="add"></ion-icon>
                             </div>
-                        </Link>
+                        </a>
                     </li> 
                     <li className=''>
-                        <Link to = {`https://api.whatsapp.com/send?phone=2347039339152`} className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                        <a href = 'https://api.whatsapp.com/send?phone=2347039339152' className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
                             Contact us
-                            <div className=' flex-center'>
+                            <div className='flex-center'>
                                 <ion-icon name="call"></ion-icon>
                             </div>
-                        </Link>
+                        </a>
                     </li>
                 </ul>
             </div>

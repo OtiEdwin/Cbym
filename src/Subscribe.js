@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './form.css'
 import './primitives.css'
 
@@ -11,7 +12,7 @@ const Subscribe = () => {
                 <div className="login relative">
                     <form action="" className=" form-inner col">
                         <div className="group">
-                            <h3 className=" primary-dark pl-1">Register</h3>
+                            <h3 className=" primary-dark pl-1">REGISTER</h3>
                         </div>
 
                         <div className="group col">
@@ -34,7 +35,7 @@ const Subscribe = () => {
                                 <ion-icon name="create" class="bg hydrated password right absolute"></ion-icon>                             
                             </div>
 
-                            <a href="#home" className="tr primary-dark label">Registered Already ?</a>                             
+                            <Link to = "/feeds" className="tr primary-dark label underline">Registered Already ?</Link>                             
                         </div>
 
                         <div className="group col">

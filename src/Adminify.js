@@ -1,10 +1,11 @@
 import './primitives.css'
+import './form.css'
 
 function Adminify() {
 
     return(
         <>
-            <div className="page-full absolute admin" id = 'subscribe'>
+            <div className="page-full absolute admin" id = 'admin'>
                 <div className="form-holder col">
                     <div className="login relative">
                         <form action="" className=" form-inner col">
@@ -15,10 +16,10 @@ function Adminify() {
 
                             <div className="group col">
                                 <div className="input-holder col relative">
-                                    <label for="email" className="primary-dark label absolute">User Email</label>
-                                    <input type="email" name="email" id="email"/>  
+                                    <label for="email" className="primary-dark label absolute">Email *</label>
+                                    <input type="email" name="email" id="email" />  
                                     
-                                    <ion-icon name="people" className="md hydrated password left absolute"></ion-icon>                               
+                                    <ion-icon name="people" class="bg hydrated password left absolute"></ion-icon>                               
                                 </div>
                             </div>
 

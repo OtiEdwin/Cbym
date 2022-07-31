@@ -1,7 +1,7 @@
 .form-holder{
     width: 100%;
     min-height: 100%;
-    padding: 4rem 2rem;
+    padding: 0rem;
     margin: auto;
 
 }
@@ -136,11 +136,6 @@
     width: 2.2rem;
     height: 2.2rem;
 }
-.fb-alt{
-    background-color: #3b5998;
-    animation-delay: .3s;
-}
-.ig-alt{
-    background-color: #ec4d52;
-    animation-delay: .5s;
+.underline{
+    text-decoration: underline;
 }

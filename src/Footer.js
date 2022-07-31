@@ -17,16 +17,16 @@ function Footer() {
                 <div className='row space-btw two'>
                 <div>
                     <ul>
-                    <li><Link to = {`https://api.whatsapp.com/send?phone=2347039339152&text=Hello,+i'd+like+to+make+a+donation`}>Donate</Link></li>
-                    <li><Link to = {`https://api.whatsapp.com/send?phone=2347039339152&text=Hello,+i'd+like+to+make+more+enquires+about+CBYM+campaigns`}>Campaign</Link></li>
-                    <li><Link to = {`https://api.whatsapp.com/send?phone=2347039339152&text=Hello,+i'd+like+to+know+more+about+CBYM+fundraisers`}>Fundraisers</Link></li>
-                    <li><Link to = ''>Sponsors</Link></li>
+                    <li><a href = {`https://api.whatsapp.com/send?phone=2347039339152&text=Hello,+i'd+like+to+make+a+donation`}>Donate</a></li>
+                    <li><a href = {`https://api.whatsapp.com/send?phone=2347039339152&text=Hello,+i'd+like+to+make+more+enquires+about+CBYM+campaigns`}>Campaign</a></li>
+                    <li><a href = {`https://api.whatsapp.com/send?phone=2347039339152&text=Hello,+i'd+like+to+know+more+about+CBYM+fundraisers`}>Fundraisers</a></li>
+                    <li><a href = ''>Sponsors</a></li>
                     </ul>
                 </div>
                 <div>
                     <ul>
-                    <li><Link to = {`https://api.whatsapp.com/send?phone=2347039339152`}>Contact</Link></li>
-                    <li><Link to = ''>Help</Link></li>
+                    <li><a href = "https://api.whatsapp.com/send?phone=2347039339152">Contact</a></li>
+                    <li><a href = ''>Help</a></li>
                     </ul>
                 </div>
                 </div>
@@ -40,7 +40,7 @@ function Footer() {
                     </span>
                     <div className='pa-l'>
                     Call Us
-                    <Link to = '' className='stand-out'>07039339152</Link>
+                    <a href = '' className='stand-out'>07039339152</a>
                     </div>
                     
                 </li>
@@ -51,7 +51,7 @@ function Footer() {
                     </span>
                     <div className='pa-l'>
                     Send an Email
-                    <Link to = '' className='stand-out'>example@email.com</Link>
+                    <a href = '' className='stand-out'>example@email.com</a>
                     </div>
                     
                 </li>
@@ -62,7 +62,7 @@ function Footer() {
                     </span>
                     <div className='pa-l'>
                     Leave a message
-                    <Link to = {`https://api.whatsapp.com/send?phone=2347039339152`} className='stand-out'>+234 703 933 9152</Link>
+                    <a href = {`https://api.whatsapp.com/send?phone=2347039339152`} className='stand-out'>+234 703 933 9152</a>
                     </div>
                         
                 </li>
@@ -76,10 +76,10 @@ function Footer() {
                 </div>
                 <div className='ratio-5'>
                 <ul className='row'>
-                    <li><Link to = ''><ion-icon name="logo-facebook" class='bg mbc hydrated white'></ion-icon></Link></li>
-                    <li><Link to = ''><ion-icon name="logo-instagram" class='bg mbc hydrated white'></ion-icon></Link></li>
-                    <li><Link to = ''><ion-icon name="logo-twitter" class='bg mbc hydrated white'></ion-icon></Link></li>
-                    <li><Link to = {`https://api.whatsapp.com/send?phone=2347039339152`}><ion-icon name="logo-whatsapp" class='bg mbc hydrated white'></ion-icon></Link></li>
+                    <li><a href = ''><ion-icon name="logo-facebook" class='bg mbc hydrated white'></ion-icon></a></li>
+                    <li><a href = ''><ion-icon name="logo-instagram" class='bg mbc hydrated white'></ion-icon></a></li>
+                    <li><a href = ''><ion-icon name="logo-twitter" class='bg mbc hydrated white'></ion-icon></a></li>
+                    <li><a href = {`https://api.whatsapp.com/send?phone=2347039339152`}><ion-icon name="logo-whatsapp" class='bg mbc hydrated white'></ion-icon></a></li>
                 </ul>
                 </div>
             </div>

@@ -23,33 +23,52 @@ function Home() {
       <Section_2/>
       <Section_3/>
       <Section_4/>
-      <Section_1/>
 
     </>
   );
 }
 
+function Not_Found() {
+  return (
+    <section className="page col">
+           
+        <div className="row relative  gray-background">
+            <div className='col'>
+              <h2 className='tc mc head-text-alt'>Error</h2>
+              <h3 className='primary-dark pl-1'>404 : Page not found</h3>
+              <p>This means your url may be misspelled or broken.</p>              
+            </div>
+
+          
+        </div>
+
+    </section>
+  );
+}
+
 function App() {
 
-  let logged_in = !true
+  const [logged_in, setLoggedIn] = useState(false);
 
   return (
     <BrowserRouter>
 
       <Routes> 
-        <Route path='/admin' element={ <Adminify/> }/>
-      </Routes>
-
-      <Routes> 
         <Route path='/' element={ <Header display = {true} is_logged_in = { logged_in } /> }/>
         <Route path='*' element={ <Header display = {false} is_logged_in = { logged_in } /> } /> 
       </Routes>
+      
+      <Routes> 
+        <Route path='*' element={ <Adminify/> }/>
+      </Routes>
 
       <Routes>
-        <Route path='/' element={ <Home/> }/>
-        <Route path='/login' element={ <Login/> }/>
-        <Route path='/feeds' element={ <Feeds is_logged_in = { logged_in } /> }/>
-        <Route path='/subscribe' element={ <Subscribe/> }/>
+        <Route path='/' element={ <Home/> } />
+        <Route path='/login' element={ <Login/> } />
+        <Route path='/feeds' element={ <Feeds is_logged_in = { logged_in } /> } />
+        <Route path='/subscribe' element={ <Subscribe/> } />
+        <Route path='/about' element={ <Section_1/> } />
+        <Route path='*' element={ <Not_Found/> } />
       </Routes>
 
       <Routes> <Route path='*' element={ <Footer/> }/> </Routes>

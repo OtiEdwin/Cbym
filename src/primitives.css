@@ -144,6 +144,14 @@ hr{
     border-color: transparent;
     background-color: var(--primary-color);
 }
+br{
+    width: 10%;
+    border-radius: 100px;
+    height: .2rem;
+    margin: 1.5rem 0;
+    border-color: transparent;
+    background-color: transparent;
+}
 button, button:focus{
     border: 0px;
     outline: 0px;
@@ -337,6 +345,17 @@ button, button:focus{
     margin: auto;
     justify-content: center;
 }
+.alt-5{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto 5rem auto;
+    justify-content: center;    
+}
+.alt-5 p, .pee{
+    line-height: 1.7rem;
+    font-size: 1.2rem;
+}
 
 .p-txt{
     width: 80%;
@@ -443,6 +462,12 @@ button, button:focus{
     border-radius: 15px;
     margin: 1rem auto 2rem auto;
 }
+.admin{
+    display: none;
+}
+.admin:target{
+    display: initial;
+}
 
 
 
@@ -488,18 +513,21 @@ button, button:focus{
 .board3{
     background-image: linear-gradient(to left, #008d7975, #008d7875), url(../public/board3.jpg);
     background-size: cover;
+    background-position: center;
     overflow: hidden;
     height: 25rem;
 }
 .board4{
     background-image: linear-gradient(to left, #4caf50bf, #4caf4f38), url(../public/board4.jpg);
     background-size: cover;
+    background-position: center;
     overflow: hidden;
     height: 25rem;
 }
 .board5{
     background-image: linear-gradient(to right, #e9880046, #e98800af), url(../public/board5.png);
     background-size: cover;
+    background-position: center;
     overflow: hidden;
     height: 25rem;
 }
@@ -559,6 +587,7 @@ button, button:focus{
 .head-text-alt{
     color: var(--primary-color-dark);
     margin: 1rem auto;
+    padding: 0rem;
 }
 
 
@@ -683,6 +712,9 @@ button, button:focus{
     .head-text {
         margin: 0rem auto;
     }
+    .alt-5 {
+        width: 70%
+    }
     .anti-responsive{
         display: none !important;
     }
@@ -700,7 +732,7 @@ button, button:focus{
         width: 100% !important;
     }
     p, .foot p, .foot li, .contact li{
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
     .card {
         margin: 1rem auto;
@@ -752,20 +784,55 @@ button, button:focus{
 
 
     .img1 {
-        top: 30%;
-        left: 50%;
+        top: 20%;
+        left: 45%;
         z-index: 1;
     }
 
     .img3 {
         bottom: 20%;
-        right: 30%;
+        right: 40%;
+    }
+
+    .img2 {
+        bottom: 10%;
+        left: 20%;
     }
 }
 
+@media (max-width:650px) {
+    .img1 {
+        top: 15%;
+        left: 35%;
+    }
 
+    .img3 {
+        bottom: 20%;
+        right: 40%;
+    }
+
+    .img2 {
+        top: 5%;
+        left: 5%;
+    }
+}
 
 @media (max-width:500px) {
+
+    .img1 {
+        top: 15%;
+        left: 40%;
+    }
+
+    .img3 {
+        bottom: 20%;
+        right: 40%;
+    }
+
+    .img2 {
+        top: 5%;
+        left: 5%;
+    }
 
     .h1-alt{
         font-size: 2.7rem;
@@ -808,4 +875,45 @@ button, button:focus{
     }
 
 }
+
+@media (max-width:420px) {
+    .img1 {
+        top: 15%;
+        left: 45%
+    }
+
+    .img3 {
+        bottom: 20%;
+        right: 23%;
+    }
+
+    .img2 {
+        top: 5%;
+        left: 0%;
+    }
+}
+@media (max-width:300px) {
+    .img1 {
+        top: 23%;
+        left: 45%
+    }
+
+    .img3 {
+        bottom: 25%;
+        right: 23%;
+    }
+
+    .img2 {
+        top: 15%;
+        left: 0%;
+    }
+    .ml1 {
+        margin: 1rem 0rem !important;
+    }
+
+    .outline-alt {
+        width: 13rem;
+    }    
+}
+
 
