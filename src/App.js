@@ -17,6 +17,8 @@ import {
   Routes,
 } from 'react-router-dom';
 
+
+//loader
 function Home() {
   return (
     <>
