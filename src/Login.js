@@ -37,14 +37,7 @@ const Login = () => {
 
                         <div className="group col">
                             <div className="input-holder col relative">
-                                <label for="email" className="primary-dark label absolute">Email *</label>
-                                <input type="email" name="email" id="email"/>  
-                                
-                                <ion-icon name="people" class="bg hydrated password left absolute"></ion-icon>                               
-                            </div>
-
-                            <div className="input-holder col relative">
-                                <label for="password" class="primary-dark label absolute">Password *</label>
+                                <label htmlFor="password" class="primary-dark label absolute">Admin Key *</label>
                                 <input type={ passValue } name="password" id="password"/> 
 
                                 <ion-icon name="key" class="bg hydrated password left absolute"></ion-icon> 
@@ -54,7 +47,7 @@ const Login = () => {
                                
                                
                             </div>
-                            <a href="#" className="tr primary-dark label underline">forgot password ?</a>                             
+                            <a href="#" className="tr primary-dark label underline">forgot Key ?</a>                             
                         </div>
 
                         <div className="group col">

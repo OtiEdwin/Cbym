@@ -17,20 +17,20 @@ const Subscribe = () => {
 
                         <div className="group col">
                             <div className="input-holder col relative">
-                                <label for="email" className="primary-dark label absolute">Email *</label>
+                                <label htmlFor="email" className="primary-dark label absolute">Email *</label>
                                 <input type="email" name="email" id="email" />  
                                 
                                 <ion-icon name="people" class="bg hydrated password left absolute"></ion-icon>                               
                             </div>
 
                             <div className="input-holder col relative">
-                                <label for="full-name" class="primary-dark label absolute"> Full Name *</label>
+                                <label htmlFor="full-name" class="primary-dark label absolute"> Full Name *</label>
                                 <input type="text" name="full name" id="full-name"/> 
                                 <ion-icon name="create" class="bg hydrated password right absolute"></ion-icon>                             
                             </div>
 
                             <div className="input-holder col relative">
-                                <label for="last-name" class="primary-dark label absolute"> last Name *</label>
+                                <label htmlFor="last-name" class="primary-dark label absolute"> last Name *</label>
                                 <input type="text" name="last name" id="last-name"/>  
                                 <ion-icon name="create" class="bg hydrated password right absolute"></ion-icon>                             
                             </div>

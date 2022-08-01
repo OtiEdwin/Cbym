@@ -1,4 +1,5 @@
 import Navigation from './Navigation';
+import Navcontent from './Navcontent'
 import './primitives.css';
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
@@ -10,74 +11,120 @@ function Header({ is_logged_in, display}) {
     return(
         <header>
             <Navigation doSomething = { ()=>{setToggle((toggle + 1)%2)} } is_logged_in = { is_logged_in }/>
-            
-            <div className="toggle col primary-dark responsive" style={{ opacity: 1-toggle , transform: `translate(${ 100* toggle }%)` }}>
-                <ul className='container'>
-                    <div className='tr ex' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
-                        <div className='nav-icon-shell-alt flex-center'>
-                            <ion-icon name="close"></ion-icon>
-                        </div> 
-                     
-                    </div>
-                    <li className=''>
-                        <Link to='/' className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
-                            Home
-                            <div className=' flex-center'>
-                                <ion-icon name="home"></ion-icon>
-                            </div>
-                        </Link>
-                    </li>
-                    <li className=''>
-                        <Link to='/feeds'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
-                            Latest
-                            <div className=' flex-center'>
-                                <ion-icon name="globe"></ion-icon>
-                            </div>
-                        </Link>
-                    </li>
-                    <li className=''>
-                        <Link to='/subscribe'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
-                            Subscribe
-                            <div className=' flex-center'>
-                                <ion-icon name="paper-plane"></ion-icon>
-                            </div>
-                        </Link>
-                    </li>
-                    <li className=''>
-                        <Link to='/about'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
-                            About
-                            <div className=' flex-center'>
-                                <ion-icon name="help-circle"></ion-icon>
-                            </div>
-                        </Link>
-                    </li>
-                    <li className=''>
-                        <Link to='/login'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
-                            Admin Login
-                            <div className=' flex-center'>
-                                <ion-icon name="log-in"></ion-icon>
-                            </div>                        
-                        </Link> 
 
-                    </li>
-                    <li className=''>
-                        <a href='#admin' className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
-                            Add Admin 
-                            <div className=' flex-center'>
-                                <ion-icon name="add"></ion-icon>
+            {
+                is_logged_in?( 
+                    <div className="toggle col primary-dark responsive" style={{ opacity: 1-toggle , transform: `translate(${ 100* toggle }%)` }}>
+                        <ul className='container'>
+                            <div className='tr ex' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                                <div className='nav-icon-shell-alt flex-center'>
+                                    <ion-icon name="close"></ion-icon>
+                                </div> 
+                            
                             </div>
-                        </a>
-                    </li> 
-                    <li className=''>
-                        <a href = 'https://api.whatsapp.com/send?phone=2347039339152' className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
-                            Contact us
-                            <div className='flex-center'>
-                                <ion-icon name="call"></ion-icon>
+                            <li className=''>
+                                <Link to='/' className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                                    Home
+                                    <div className=' flex-center'>
+                                        <ion-icon name="home"></ion-icon>
+                                    </div>
+                                </Link>
+                            </li>
+                            <li className=''>
+                                <Link to='/feeds'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                                    Post
+                                    <div className=' flex-center'>
+                                        <ion-icon name="globe"></ion-icon>
+                                    </div>
+                                </Link>
+                            </li>
+                            <li className=''>
+                                <Link to='/about'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                                    about
+                                    <div className=' flex-center'>
+                                        <ion-icon name="help-circle"></ion-icon>
+                                    </div>
+                                </Link>
+                            </li>
+                            <li className=''>
+                                <Link to='/admin'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                                    Logout
+                                    <div className=' flex-center'>
+                                        <ion-icon name="log-in"></ion-icon>
+                                    </div>                        
+                                </Link> 
+
+                            </li>
+        
+                        </ul>
+                    </div>                    
+                )
+                :(
+                    <div className="toggle col primary-dark responsive" style={{ opacity: 1-toggle , transform: `translate(${ 100* toggle }%)` }}>
+                        <ul className='container'>
+                            <div className='tr ex' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                                <div className='nav-icon-shell-alt flex-center'>
+                                    <ion-icon name="close"></ion-icon>
+                                </div> 
+                            
                             </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                            <li className=''>
+                                <Link to='/' className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                                    Home
+                                    <div className=' flex-center'>
+                                        <ion-icon name="home"></ion-icon>
+                                    </div>
+                                </Link>
+                            </li>
+                            <li className=''>
+                                <Link to='/feeds'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                                    Latest
+                                    <div className=' flex-center'>
+                                        <ion-icon name="globe"></ion-icon>
+                                    </div>
+                                </Link>
+                            </li>
+                            <li className=''>
+                                <Link to='/subscribe'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                                    Subscribe
+                                    <div className=' flex-center'>
+                                        <ion-icon name="paper-plane"></ion-icon>
+                                    </div>
+                                </Link>
+                            </li>
+                            <li className=''>
+                                <Link to='/about'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                                    About
+                                    <div className=' flex-center'>
+                                        <ion-icon name="help-circle"></ion-icon>
+                                    </div>
+                                </Link>
+                            </li>
+                            <li className=''>
+                                <Link to='/admin'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                                    Admin
+                                    <div className=' flex-center'>
+                                        <ion-icon name="log-in"></ion-icon>
+                                    </div>                        
+                                </Link> 
+
+                            </li>
+        
+                            <li className=''>
+                                <a href = 'https://api.whatsapp.com/send?phone=2347039339152' className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                                    Contact us
+                                    <div className=' flex-center'>
+                                        <ion-icon name="call"></ion-icon>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                )
+                
+            }
+            
+
             
             {
                 display?(

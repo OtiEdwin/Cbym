@@ -9,6 +9,12 @@ function Adminify() {
                 <div className="form-holder col">
                     <div className="login relative">
                         <form action="" className=" form-inner col">
+                            <div className='tr ex' onClick=''>
+                                <div className='nav-icon-shell-alt flex-center'>
+                                    <ion-icon name="close"></ion-icon>
+                                </div> 
+                            </div>
+
                             <div className="group">
                                 <h3 className=" primary-dark pl-1">Add Admin</h3>
                                 <h6 className='pl-1'>Select Member to make Administrator</h6>                             

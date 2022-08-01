@@ -9,7 +9,7 @@ const Section_4 = () =>{
             <div className="row relative  gray-background">
                 <div className="ratio-5">
                     <div className="box tl col slide-left tert">
-                        <div className="section-p row">
+                        <div className="section-p col">
                             <h4 className='section-h4 primary-dark ml-0'>Let's make the right Choice</h4>
                             <div className="sub_section-p">
                                 <p>Despite all we have been through in these trying times, Now is the time for us to unite and choose the right Leader for our Nation.</p>

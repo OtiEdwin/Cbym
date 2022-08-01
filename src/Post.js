@@ -13,12 +13,16 @@ function Post({ is_logged_in }) {
                         <div className='flex-center'>
                             <form className='form-width'>
                                 <div className='input-holder relative'>
-                                    <label className='primary-dark label absolute'>Post Title</label>
-                                    <input/>
+                                    <label htmlFor = 'title' className='primary-dark label absolute'>Post Title</label>
+                                    <input id = 'title' />
                                 </div>
                                 <div className='input-holder relative'>
-                                    <label className='primary-dark text-label absolute'>Post Body</label>
-                                    <textarea/>
+                                    <label htmlFor = 'author' className='primary-dark label absolute'>Author</label>
+                                    <input id = 'author'/>
+                                </div>
+                                <div className='input-holder relative'>
+                                    <label htmlFor='content' className='primary-dark text-label absolute'>Post Body</label>
+                                    <textarea id='content'/>
                                 </div>
                                 <div className='input-holder relative'>
                                     <button className='btns filled'>Share &rarr;</button>

@@ -12,7 +12,7 @@ const Section_3 = () =>{
 
                 <div className="ratio-5">
                     <div className="box tl col sec">
-                        <div className="section-p row">
+                        <div className="section-p col">
                             <h4 className='section-h4 primary-dark ml-0'>What do we offer ?</h4>
                             <div className="sub_section-p">
                                 <p>Join our newsletter and stay updated with our day to day movements. <span className='secondary'>NO DULL AM!</span></p>

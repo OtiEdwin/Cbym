@@ -7,6 +7,8 @@ import Section_1 from './Section_1'
 import Section_2 from './Section_2';
 import Section_3 from './Section_3';
 import Section_4 from './Section_4';
+import Loading_Box from './Loading';
+import Dialog_Box from './Dialog';
 import Footer from './Footer';
 import React, { useState } from 'react'
 import Adminify from './Adminify';
@@ -46,9 +48,30 @@ function Not_Found() {
   );
 }
 
-function App() {
 
-  const [logged_in, setLoggedIn] = useState(false);
+
+function App() {
+  const [logged_in, setLoggedIn] = useState(true);
+  const [dialogue, setDialogue ] = useState('none')
+  const [loading, setLoading ] = useState('none')
+
+  function dialogChange() {
+    if (dialogue === 'none'){
+      setDialogue('initial')
+    }
+    else{
+      setDialogue('none')
+    }
+  }
+
+  function loadingChange() {
+    if (loading === 'none'){
+      setLoading('initial')
+    }
+    else{
+      setLoading('none')
+    }
+  }
 
   return (
     <BrowserRouter>
@@ -59,12 +82,13 @@ function App() {
       </Routes>
       
       <Routes> 
-        <Route path='*' element={ <Adminify/> }/>
+        <Route path='*' element={ <Dialog_Box dialogue = {dialogue} dialogChange = { dialogChange }/> }/>
+        <Route path='*' element={ <Loading_Box loading = {loading} loadingChange = { loadingChange }/> }/>
       </Routes>
 
       <Routes>
         <Route path='/' element={ <Home/> } />
-        <Route path='/login' element={ <Login/> } />
+        <Route path='/admin' element={ <Login/> } />
         <Route path='/feeds' element={ <Feeds is_logged_in = { logged_in } /> } />
         <Route path='/subscribe' element={ <Subscribe/> } />
         <Route path='/about' element={ <Section_1/> } />
