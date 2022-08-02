@@ -135,20 +135,19 @@ function rotateAboutX () {
 
 // STICKY NAVBAR
 
-// function stickNavbar () {
-//     let navbar = document.getElementsByClassName('navbar')[0]
-//     let bound = window.pageYOffset
+function stickNavbar () {
+    let navbar = document.getElementsByClassName('navbar')[0]
+    let bound = window.pageYOffset
 
-//     if ( bound > 25 ){
-//         navbar.style.position = 'fixed'
-//         navbar.style.boxShadow = '1px 1px 5px darkgrey'
-//         navbar.style.backgroundColor = '#f6f6f6'
-//     }
-//     else{
-//         navbar.style.position = 'initial'
-//         navbar.style.boxShadow = '0px 0px 0px transparent'
-//     }
-// }
+    if ( bound > 70 ){
+        navbar.style.position = 'fixed'
+        navbar.style.backgroundColor = '#000000e8'
+    }
+    else{
+        navbar.style.position = 'initial'
+        navbar.style.backgroundColor = 'transparent'
+    }
+}
 
 function animationTrigger () {
     // rightSlide()
@@ -165,25 +164,3 @@ function animationTrigger () {
 window.addEventListener( 'scroll', animationTrigger )
 
 
-
-let carousel = 0
-changeImage()
-
-function changeImage(){
-    let i
-    let switcher = document.getElementsByClassName('switch')
-
-    for ( i = 0; i < switcher.length; i++) {
-        // switcher[i].style.display = 'none';
-        switcher[i].style.backgroundImage = `linear-gradient(to left, #008d7975, #008d7875), url(../public/board${i}.jpg)`
-    }
-
-    carousel ++
-
-    if (carousel > switcher.length) {
-        carousel = 1
-    }
-    switcher[carousel-1].style.display = 'initial';
-
-    setTimeout(changeImage, 2000);
-}

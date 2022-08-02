@@ -51,7 +51,7 @@ function Not_Found() {
 
 
 function App() {
-  const [logged_in, setLoggedIn] = useState(true);
+  const [logged_in, setLoggedIn] = useState(false);
   const [dialogue, setDialogue ] = useState('none')
   const [loading, setLoading ] = useState('none')
 
