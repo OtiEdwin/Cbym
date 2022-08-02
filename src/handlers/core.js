@@ -3,6 +3,7 @@ let server = 'http://localhost:8080/';
 async function fetch_post(body, route){
 
   let res, data;
+  console.log(body);
   
   try{
     res = await fetch( server + route , //e.g 'http://localhost:8080/' + 'login'

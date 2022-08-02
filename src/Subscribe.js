@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import './form.css'
 import './primitives.css'
 
+import { subscribe as subscribeHandler } from './handlers/auth';
+
 const Subscribe = () => {
     return(
         <>
@@ -38,7 +40,22 @@ const Subscribe = () => {
                             <Link to = "/feeds" className="tr primary-dark label underline">Registered Already ?</Link>                             
                         </div>
 
-                        <div className="group col">
+                        <div className="group col" onClick={ async ()=>{
+                            console.log("Hala Madrid!!");
+                            let email = document.getElementById('email').value,
+                                firstname = document.getElementById('first-name').value,
+                                lastname = document.getElementById('last-name').value;
+
+                            await subscribeHandler(email, firstname, lastname, {} )
+                            .then( (res)=>{
+                                //success or fail
+                                console.log(res);
+                            } )
+                            .catch( (error)=>{
+                                //logerror
+                                console.log(error);
+                            } );
+                        } }>
                             <a className="gradient tc">REGISTER</a>
                         </div>
 
