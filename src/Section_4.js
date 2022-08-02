@@ -15,7 +15,7 @@ const Section_4 = () =>{
                                 <p>Despite all we have been through in these trying times, Now is the time for us to unite and choose the right Leader for our Nation.</p>
                             </div>
                         </div>
-                        <Link to = '/Signup' className="btn hollow-dark tr">Yeah, i'm in &rarr;</Link>
+                        <Link to = '/subscribe' className="btn hollow-dark tr">Yeah, i'm in &rarr;</Link>
                     </div>
                 </div>
 

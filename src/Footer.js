@@ -76,10 +76,10 @@ function Footer() {
                 </div>
                 <div className='ratio-5'>
                 <ul className='row'>
-                    <li><a href = ''><ion-icon name="logo-facebook" class='bg mbc hydrated white'></ion-icon></a></li>
-                    <li><a href = ''><ion-icon name="logo-instagram" class='bg mbc hydrated white'></ion-icon></a></li>
-                    <li><a href = ''><ion-icon name="logo-twitter" class='bg mbc hydrated white'></ion-icon></a></li>
-                    <li><a href = {`https://api.whatsapp.com/send?phone=2347039339152`}><ion-icon name="logo-whatsapp" class='bg mbc hydrated white'></ion-icon></a></li>
+                    <li><a href = ''><ion-icon name="logo-facebook" class='mbc hydrated white'></ion-icon></a></li>
+                    <li><a href = ''><ion-icon name="logo-instagram" class='mbc hydrated white'></ion-icon></a></li>
+                    <li><a href = ''><ion-icon name="logo-twitter" class='mbc hydrated white'></ion-icon></a></li>
+                    <li><a href = {`https://api.whatsapp.com/send?phone=2347039339152`}><ion-icon name="logo-whatsapp" class='mbc hydrated white'></ion-icon></a></li>
                 </ul>
                 </div>
             </div>
