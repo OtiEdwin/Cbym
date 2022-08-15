@@ -110,6 +110,7 @@ function Header({ is_logged_in, display}) {
                             <img src='stock2.jpg' alt='' className='absolute outline-alt img1'/>
                             <img src='stock8.png' alt='' className='absolute outline-alt img2'/>
                             <img src='stock0.jpg' alt='' className='absolute outline-alt img3'/>
+                            <img src='young.jpg' alt='' className='absolute outline-alt img0'/>
                             <div className='board1 absolute'></div>
                             <div className='board2 absolute'></div>
                         </div>

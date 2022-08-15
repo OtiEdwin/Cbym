@@ -501,8 +501,8 @@ button, button:focus{
 }
 .outline-alt{
     outline: .5rem solid white;
-    width: 17rem;
-    z-index: 1;
+    width: 15rem;
+    z-index: 2;
     transition: all .3s;
 }
 .board1{
@@ -554,6 +554,11 @@ button, button:focus{
     outline: .5rem solid var(--primary-color);
     z-index: 3;
 }
+.img0{
+    top: 0%;
+    left: 35%;
+    z-index: 1
+}
 .img1{
     top: 28%;
     left: 40%;
@@ -561,11 +566,11 @@ button, button:focus{
 }
 .img2{
     top: 10%;
-    left: 5%;
+    left: -10%;
 }
 .img3{
-    bottom: 15%;
-    right: 50%;
+    bottom: 25%;
+    right: 60%;
 }
 .img4{
     width: 38%;
@@ -672,10 +677,14 @@ button, button:focus{
 
 
 }
-.md{
+.md, .md:active{
     width: 1.3rem;
     height: 1.3rem;      
-    margin: auto;    
+    margin: auto;  
+    transition: all .3s;  
+}
+.md:hover{
+transform: scale(1.25);   
 }
   
 
