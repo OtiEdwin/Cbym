@@ -26,8 +26,8 @@ const Subscribe = () => {
                             </div>
 
                             <div className="input-holder col relative">
-                                <label htmlFor="full-name" class="primary-dark label absolute"> Full Name *</label>
-                                <input type="text" name="full name" id="full-name"/> 
+                                <label htmlFor="first-name" class="primary-dark label absolute"> First Name *</label>
+                                <input type="text" name="first name" id="first-name"/> 
                                 <ion-icon name="create" class="bg hydrated password right absolute"></ion-icon>                             
                             </div>
 
@@ -69,4 +69,5 @@ const Subscribe = () => {
         </>
     )
 }
+
 export default Subscribe

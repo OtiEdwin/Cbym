@@ -732,8 +732,11 @@ button, button:focus{
     .input-holder textarea {
         width: 100% !important;
     }
-    p, .foot p, .foot li, .contact li{
-        font-size: 1rem;
+    p, .foot p, .foot li a, .contact li{
+        font-size: 1.5rem;
+    }
+    .foot h3{
+        font-size: 2rem !important;
     }
     .card {
         margin: 1rem auto;
