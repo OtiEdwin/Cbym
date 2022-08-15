@@ -12,9 +12,7 @@
     border-radius: 1rem;
     box-shadow: .1px .1px 5px grey;
 }
-.form-background{
-    background-image: url();
-}
+
 .form-inner{
     width: 100%;
     margin: auto;
@@ -69,6 +67,7 @@
 }
 .input-holder textarea{
     height: 10rem;
+    padding: 1rem;
     width: 100%;
 }
 

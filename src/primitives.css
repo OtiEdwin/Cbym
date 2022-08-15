@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* background-color: rgba(0, 0, 255, 0.13); */
 }
 body{
     background-color: #ececec6e;
@@ -55,7 +56,7 @@ body::-moz-scrollbar-thumb{
 }
 .page{
     width: 90%;
-    margin: auto;
+    margin: 2rem auto;
 }
 header, section, footer {
     margin: auto;
@@ -90,7 +91,7 @@ input[type="passcode" i] {
 
 /* PRIMITIVES */
 
-p{
+p, .p{
     font-size: 1rem;
     color: #4d4d4d;
     width: 100%;
@@ -405,7 +406,15 @@ button, button:focus{
     color: var(--primary-color-dark);
     margin: 1rem 0;
 }
-.filled:hover, .navigation-list li:hover, .box a:hover{ 
+.delete{
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: #b50202;
+    border: 1px solid #b50202;
+    margin: 0 1rem 1rem auto;
+}
+.filled:hover, .navigation-list li:hover, .box a:hover, .btn:hover{ 
     transform: scale(1.05);
 }
 .red{
@@ -477,6 +486,7 @@ button, button:focus{
 .head{
     height: fit-content;
 }
+
 .stock-holder{
     height: 35rem;
 }
@@ -663,8 +673,8 @@ button, button:focus{
 
 }
 .md{
-    width: 2rem;
-    height: 2rem;      
+    width: 1.3rem;
+    height: 1.3rem;      
     margin: auto;    
 }
   
@@ -724,7 +734,7 @@ button, button:focus{
     }
     .ratio-2, .ratio-3, .ratio-4, .ratio-5, .ratio-6, .ratio-7, .ratio-8, .ratio-9, .ratio-10{
         width: 100%;
-        margin: 1rem 2.5rem;
+        margin: 1rem 2rem;
     }
     .form-width{
         width: 90%;
@@ -732,7 +742,7 @@ button, button:focus{
     .input-holder textarea {
         width: 100% !important;
     }
-    p, .foot p, .foot li a, .contact li{
+    p, .foot p, .foot li a, .contact li, .p{
         font-size: 1.5rem;
     }
     .foot h3{
@@ -803,6 +813,12 @@ button, button:focus{
         bottom: 10%;
         left: 20%;
     }
+
+    .md{
+        width: 2rem;
+        height: 2rem;      
+        margin: auto;    
+    }
 }
 
 @media (max-width:650px) {
@@ -835,6 +851,9 @@ button, button:focus{
     .input-holder input{
         height: 3.7rem !important;
         border-radius: 1.5rem !important;
+    }
+    .page {
+        width: 95% !important;
     }
     
     .group {
@@ -945,5 +964,3 @@ button, button:focus{
         width: 13rem;
     }    
 }
-
-

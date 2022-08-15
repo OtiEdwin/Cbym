@@ -23,6 +23,11 @@ const Login = () => {
             setPassValue('password')
         }
     }
+
+    function signin(){
+        console.log('signing in')
+    }
+
     return( 
         <>
         <div className="page-full">
@@ -30,7 +35,7 @@ const Login = () => {
                 <h2 className='tc mc head-text-alt'><span className='dark h2'>&mdash;</span> Login to your Account</h2>
 
                 <div className="login relative">
-                    <form action="" className=" form-inner col">
+                    <form method='post' className=" form-inner col">
                         <div className="group">
                             <h3 className=" primary-dark pl-1">LOGIN</h3>
                         </div>
@@ -38,7 +43,7 @@ const Login = () => {
                         <div className="group col">
                             <div className="input-holder col relative">
                                 <label htmlFor="password" class="primary-dark label absolute">Admin Key *</label>
-                                <input type={ passValue } name="password" id="password"/> 
+                                <input type={ passValue } name="password" id="password" required/> 
 
                                 <ion-icon name="key" class="bg hydrated password left absolute"></ion-icon> 
                                 <div className='eye-container nav-icon-shell right absolute flex-center' onClick={setPassword}>
@@ -51,7 +56,7 @@ const Login = () => {
                         </div>
 
                         <div className="group col">
-                            <a className="gradient tc">LOGIN</a>
+                            <button className="gradient tc" onClick={ signin() }>LOGIN</button>
                         </div>
 
                         <div className="or relative">

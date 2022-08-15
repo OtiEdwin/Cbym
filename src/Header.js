@@ -21,30 +21,7 @@ function Header({ is_logged_in, display}) {
                                 </div> 
                             
                             </div>
-                            <li className=''>
-                                <Link to='/' className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
-                                    Home
-                                    <div className=' flex-center'>
-                                        <ion-icon name="home"></ion-icon>
-                                    </div>
-                                </Link>
-                            </li>
-                            <li className=''>
-                                <Link to='/feeds'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
-                                    Post
-                                    <div className=' flex-center'>
-                                        <ion-icon name="globe"></ion-icon>
-                                    </div>
-                                </Link>
-                            </li>
-                            <li className=''>
-                                <Link to='/about'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
-                                    about
-                                    <div className=' flex-center'>
-                                        <ion-icon name="help-circle"></ion-icon>
-                                    </div>
-                                </Link>
-                            </li>
+
                             <li className=''>
                                 <Link to='/admin'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
                                     Logout
@@ -98,15 +75,6 @@ function Header({ is_logged_in, display}) {
                                         <ion-icon name="help-circle"></ion-icon>
                                     </div>
                                 </Link>
-                            </li>
-                            <li className=''>
-                                <Link to='/admin'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
-                                    Admin
-                                    <div className=' flex-center'>
-                                        <ion-icon name="log-in"></ion-icon>
-                                    </div>                        
-                                </Link> 
-
                             </li>
         
                             <li className=''>

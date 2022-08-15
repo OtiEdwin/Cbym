@@ -9,26 +9,21 @@ function Footer() {
             <div className='row mt-2'>
             <div className='ratio-2 col ms-2'>
                 <h3><span className='primary h3'>&mdash;</span> About</h3>
-                <p className='stand-in'>All hands on deck, Let's change the fate of <span className='green'>Ni</span>ger<span className='green'>ia</span> &mdash; CBYM</p>
+                <p className='stand-in'>All hands on deck, Let's change the fate of <span className='green p'>Ni</span>ger<span className='green p'>ia</span> &mdash; CBYM</p>
                 <Link to = '/feeds' className='btns filled'>see more &rarr;</Link>
             </div>
             <div className='ratio-2 col ms-2'>
                 <h3><span className='primary h3'>&mdash;</span> Explore</h3>
                 <div className='row space-btw two'>
-                <div>
-                    <ul>
-                    <li><a href = {`https://api.whatsapp.com/send?phone=2347039339152&text=Hello,+i'd+like+to+make+a+donation`}>Donate</a></li>
-                    <li><a href = {`https://api.whatsapp.com/send?phone=2347039339152&text=Hello,+i'd+like+to+make+more+enquires+about+CBYM+campaigns`}>Campaign</a></li>
-                    <li><a href = {`https://api.whatsapp.com/send?phone=2347039339152&text=Hello,+i'd+like+to+know+more+about+CBYM+fundraisers`}>Fundraisers</a></li>
-                    <li><a href = ''>Sponsors</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <ul>
-                    <li><a href = "https://api.whatsapp.com/send?phone=2347039339152">Contact</a></li>
-                    <li><a href = ''>Help</a></li>
-                    </ul>
-                </div>
+                    <div>
+                        <ul>
+                            <li><a href = {`https://api.whatsapp.com/send?phone=2347039339152&text=Hello,+i'd+like+to+make+a+donation`}>Donate</a></li>
+                            <li><a href = {`https://api.whatsapp.com/send?phone=2347039339152&text=Hello,+i'd+like+to+make+more+enquires+about+CBYM+campaigns`}>Campaign</a></li>
+                            <li><a href = {`https://api.whatsapp.com/send?phone=2347039339152&text=Hello,+i'd+like+to+know+more+about+CBYM+Volunteering`}>Volnteers</a></li>
+                            <li><a href = "https://api.whatsapp.com/send?phone=2347039339152">Contact</a></li>
+                            <li><a href = ''>Help</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div className='ratio-2 col ms-2 contact'>

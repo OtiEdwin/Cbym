@@ -5,6 +5,7 @@
     left: 0%;
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
     justify-content: space-between;
     flex-wrap: wrap;
     color: white;
@@ -12,9 +13,21 @@
     transition: all .5s;
 }
 .navigation-description{
-    width: 10rem;
+    width: fit-content;
     margin: auto 0rem;
     color: var(--primary-color);
+}
+.logo{
+    width: 2rem;
+    border-radius: 50%;
+    margin: 0 1rem;
+}
+.title{
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin: auto;
 }
 .navigation-list{
     display: flex;
