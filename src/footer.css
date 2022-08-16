@@ -17,7 +17,7 @@
     width: max-content;
     display: flex;
     transition: all .3s;
-    margin: .8rem;
+    margin: 1rem .8rem;
 }
 .foot li a:hover{
     color: white;
@@ -27,6 +27,10 @@
 }
 .foot p{
     margin: 1.5rem auto;
+}
+.sub-foot{
+    min-height: 20rem;
+    margin: auto;
 }
 .input{
     outline: 0px;
@@ -67,7 +71,7 @@
     color: rgb(175 173 173);
 }
 .ms-2{
-    margin-top: 2%;
+    margin: 2% 3rem auto 3rem
 }
 .foot-foot{
     background-color: var(--primary-color-dark);

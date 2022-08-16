@@ -549,15 +549,15 @@ button, button:focus{
     z-index: 3;
 }
 .outline-alt:hover{
-    width: 18rem;
+    width: 16rem;
     outline-offset: 1.2rem;
     outline: .5rem solid var(--primary-color);
     z-index: 3;
 }
 .img0{
     top: 0%;
-    left: 35%;
-    z-index: 1
+    left: 27%;
+    z-index: 1;
 }
 .img1{
     top: 28%;
@@ -799,7 +799,7 @@ transform: scale(1.25);
         padding: 1rem 1rem;
     }
     .ms-2{
-        margin: 3rem auto;
+        margin: 3rem auto !important;
         width: 70%;
     }
     .contact h3{
