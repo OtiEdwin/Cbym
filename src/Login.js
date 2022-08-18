@@ -1,5 +1,3 @@
-// import { ReactDOM } from "react"
-// import './navigation.css'
 import { useState } from 'react'
 import './form.css'
 import './primitives.css'
@@ -7,11 +5,10 @@ import './primitives.css'
 const Login = ({is_logged_in}) => {
     const [ visibility, setVisibility ] = useState('eye-off')
     const [passValue, setPassValue] = useState('password')
-    let list_value = is_logged_in?'logout':''
 
 
     function setPassword(){
-        if(visibility == 'eye-off'){
+        if(visibility === 'eye-off'){
             setVisibility('eye')
         }
         else{
@@ -19,7 +16,7 @@ const Login = ({is_logged_in}) => {
         }
         
 
-        if(passValue=='password'){
+        if(passValue ==='password'){
             setPassValue('passcode')
         }
         else{
@@ -37,14 +34,14 @@ const Login = ({is_logged_in}) => {
                 <div className="ratio-9 space-btw">
                     <div className="navigation-description flex">
                         <img src="logo.jpg" alt="CBYM-logo" className="logo"/>
-                        <h4 className=' mbc primary-dark'>CBYM &mdash; admin</h4>
+                        <h4 className=' mbc primary-dark'>CBYM</h4>
                     </div>
                 </div>
             </nav> 
 
-        <div className="page-full">
+        <div className="page-full login-page">
             <div className="form-holder col">
-                <h2 className='tc mc head-text-alt'><span className='dark h2'>&mdash;</span> Login to your Account</h2>
+                <h2 className='tc mc head-text-alt'>Login to your Account</h2>
 
                 <div className="login relative">
                     <form method='post' className=" form-inner col">
@@ -64,7 +61,6 @@ const Login = ({is_logged_in}) => {
                                
                                
                             </div>
-                            <a href="#" className="tr primary-dark label underline">forgot Key ?</a>                             
                         </div>
 
                         <div className="group col">

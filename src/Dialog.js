@@ -17,7 +17,7 @@ function Dialog_Box({ message_title, message_content, dialogue, dialogChange }) 
                       </div>
   
                       <div className="group col">
-                          <a className="gradient tc">OK</a>
+                          <a className="gradient tc" onClick={ dialogChange }>OK</a>
                       </div>
   
                   </div>
