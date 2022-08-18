@@ -751,16 +751,8 @@ transform: scale(1.25);
     .input-holder textarea {
         width: 100% !important;
     }
-<<<<<<< HEAD
-    p, .foot p, .foot li a, .contact li{
-        font-size: 1.5rem;
-    }
-    .foot h3{
-        font-size: 2rem !important;
-=======
     p, .foot p, .foot li a, .contact li, .p{
         font-size: 1.5rem;
->>>>>>> 44bebf16822325e5c8e127a29c5a6ddfd89a52c4
     }
     .foot h3{
         font-size: 2rem !important;

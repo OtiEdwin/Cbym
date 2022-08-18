@@ -3,7 +3,7 @@ import Header from './Header';
 import Feeds from './Feeds';
 import Login from './Login';
 import Subscribe from './Subscribe';
-import Section_1 from './Section_1'
+import Section_1 from './Section_1';
 import Section_2 from './Section_2';
 import Section_3 from './Section_3';
 import Section_4 from './Section_4';

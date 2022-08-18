@@ -1,4 +1,4 @@
-let server = 'http://localhost:8080/';
+let server = 'http://localhost:8080/ajax';
 
 async function fetch_post(body, route){
 
@@ -6,11 +6,11 @@ async function fetch_post(body, route){
   console.log(body);
   
   try{
-    res = await fetch( server + route , //e.g 'http://localhost:8080/' + 'login'
+    res = await fetch( server + '/' + route , //e.g 'http://localhost:8080' + '/' + 'login'
 
     {
       method: 'POST',
-      credentials: 'include',
+      // credentials: 'include',
       headers: {
           'Content-Type': 'application/json'
       },

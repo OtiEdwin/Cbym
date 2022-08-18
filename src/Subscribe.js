@@ -2,12 +2,20 @@ import { Link } from 'react-router-dom'
 import './form.css'
 import './primitives.css'
 
-import { subscribe as subscribeHandler } from './handlers/auth';
+import { subscribe } from './handlers/auth';
 
 const Subscribe = () => {
-    function register() {
-        console.log('registering')
+    function register(e) {
+        e.preventDefault();
+        console.log('registering');
+
+        let email = document.getElementById('email').value;
+        let firstname = document.getElementById('first-name').value;
+        let lastname = document.getElementById('last-name').value;
+
+        subscribe(email, firstname, lastname,  {});
     }
+
     return(
         <>
             <div className="page-full" id = 'subscribe'>
@@ -44,7 +52,7 @@ const Subscribe = () => {
                             </div>
 
                             <div className="group col">
-                                <button className="gradient tc" onClick={ register() }>REGISTER</button>
+                                <button className="gradient tc" onClick={ register }>REGISTER</button>
                             </div>
 
                             <div className="or relative">

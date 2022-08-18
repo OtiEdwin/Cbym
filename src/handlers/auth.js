@@ -2,8 +2,8 @@ const { fetch_post, routeChange, getCookie, setCookie } = require("./core.js");
 
 
 
-async function login(email, password,         props){
-    let body = { email, password };
+async function login(key,         props){
+    let body = { key };
     
     let result = await fetch_post(body, 'login');
   
@@ -12,7 +12,7 @@ async function login(email, password,         props){
     }else if(result.status === 201){
       console.log('successful login');
       
-      props.setState({ loggedin: true });
+      // props.setState({ loggedin: true });
       // set cookie to have logged in value
       // setCookie({cookie_object}, maxAgeSeconds);
       setCookie(
@@ -60,10 +60,12 @@ async function logout(          props){
     let body = { sid : getCookie('sid') };
     
     let result = await fetch_post(body, 'logout');
-  
-  
+    if( result.status === 'error'){
+        
+      console.log(result);
+    }else if(result.status === 201){
       console.log('successfully logged out');
-  
+      
       props.setState({ loggedin: false});
       // set cookie to have logged in value
       // setCookie({cookie_object}, maxAgeSeconds);
@@ -72,8 +74,18 @@ async function logout(          props){
           'loggedin': '',
           'sid': '',
         },  1);
-      
-      // routeChange('home');
+        
+        //   routeChange('home');
+    }else if(result.status === 401){
+        //
+    }else if(result.status === 404){
+
+    }else{
+
+    }
+  
+    
+    // routeChange('home');
   
 }
 

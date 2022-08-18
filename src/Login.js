@@ -4,6 +4,8 @@ import { useState } from 'react'
 import './form.css'
 import './primitives.css'
 
+import { login } from './handlers/auth';
+
 const Login = () => {
     const [ visibility, setVisibility ] = useState('eye-off')
     const [passValue, setPassValue] = useState('password')
@@ -24,8 +26,12 @@ const Login = () => {
         }
     }
 
-    function signin(){
-        console.log('signing in')
+    function signin(e){
+        e.preventDefault();
+        console.log('signing in');
+
+        let key = document.getElementById('password').value;
+        login(key, {});
     }
 
     return( 
@@ -56,7 +62,7 @@ const Login = () => {
                         </div>
 
                         <div className="group col">
-                            <button className="gradient tc" onClick={ signin() }>LOGIN</button>
+                            <button className="gradient tc" onClick={ signin }>LOGIN</button>
                         </div>
 
                         <div className="or relative">
