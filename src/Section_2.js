@@ -14,7 +14,7 @@ const Section_2 = () =>{
                                 <p>CBYM offers a safe space for like minded youths to digest useful information pertaining to the movement of the association and it's goals.</p>
                             </div>
                         </div>
-                        <Link to='/signup' className="btn hollow-dark tr">Yeah, i'm in &rarr;</Link>
+                        <Link to='/subscribe' className="btn hollow-dark tr">Yeah, i'm in &rarr;</Link>
                     </div>
                 </div>
 

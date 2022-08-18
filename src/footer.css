@@ -1,7 +1,6 @@
 /* THE FOOTER */
 
 .foot{
-    min-height: 60vh;
     background-image: linear-gradient(to right, rgb(14 25 34),rgb(14 25 34 / 95%)), url(../footerimg.png);
     color: white;
     background-size: cover;
@@ -17,7 +16,11 @@
     color: rgb(175, 173, 173);
     width: max-content;
     display: flex;
-    margin: .5rem;
+    transition: all .3s;
+    margin: .8rem;
+}
+.foot li a:hover{
+    color: white;
 }
 .contact li:not(:last-child){
     border-bottom: 1px solid #80808057;

@@ -11,8 +11,6 @@ import Loading_Box from './Loading';
 import Dialog_Box from './Dialog';
 import Footer from './Footer';
 import React, { useState } from 'react'
-import Adminify from './Adminify';
-
 import {
   BrowserRouter,
   Route,
@@ -53,7 +51,7 @@ function Not_Found() {
 
 
 function App() {
-  const [logged_in, setLoggedIn] = useState(false);
+  const [logged_in, setLoggedIn] = useState(!true);
   const [dialogue, setDialogue ] = useState('none')
   const [loading, setLoading ] = useState('none')
 

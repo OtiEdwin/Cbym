@@ -1,5 +1,4 @@
 import Navigation from './Navigation';
-import Navcontent from './Navcontent'
 import './primitives.css';
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
@@ -22,30 +21,7 @@ function Header({ is_logged_in, display}) {
                                 </div> 
                             
                             </div>
-                            <li className=''>
-                                <Link to='/' className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
-                                    Home
-                                    <div className=' flex-center'>
-                                        <ion-icon name="home"></ion-icon>
-                                    </div>
-                                </Link>
-                            </li>
-                            <li className=''>
-                                <Link to='/feeds'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
-                                    Post
-                                    <div className=' flex-center'>
-                                        <ion-icon name="globe"></ion-icon>
-                                    </div>
-                                </Link>
-                            </li>
-                            <li className=''>
-                                <Link to='/about'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
-                                    about
-                                    <div className=' flex-center'>
-                                        <ion-icon name="help-circle"></ion-icon>
-                                    </div>
-                                </Link>
-                            </li>
+
                             <li className=''>
                                 <Link to='/admin'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
                                     Logout
@@ -100,15 +76,6 @@ function Header({ is_logged_in, display}) {
                                     </div>
                                 </Link>
                             </li>
-                            <li className=''>
-                                <Link to='/admin'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
-                                    Admin
-                                    <div className=' flex-center'>
-                                        <ion-icon name="log-in"></ion-icon>
-                                    </div>                        
-                                </Link> 
-
-                            </li>
         
                             <li className=''>
                                 <a href = 'https://api.whatsapp.com/send?phone=2347039339152' className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
@@ -143,6 +110,7 @@ function Header({ is_logged_in, display}) {
                             <img src='stock2.jpg' alt='' className='absolute outline-alt img1'/>
                             <img src='stock8.png' alt='' className='absolute outline-alt img2'/>
                             <img src='stock0.jpg' alt='' className='absolute outline-alt img3'/>
+                            <img src='young.jpg' alt='' className='absolute outline-alt img0'/>
                             <div className='board1 absolute'></div>
                             <div className='board2 absolute'></div>
                         </div>

@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* background-color: rgba(0, 0, 255, 0.13); */
 }
 body{
     background-color: #ececec6e;
@@ -55,7 +56,7 @@ body::-moz-scrollbar-thumb{
 }
 .page{
     width: 90%;
-    margin: auto;
+    margin: 2rem auto;
 }
 header, section, footer {
     margin: auto;
@@ -90,7 +91,7 @@ input[type="passcode" i] {
 
 /* PRIMITIVES */
 
-p{
+p, .p{
     font-size: 1rem;
     color: #4d4d4d;
     width: 100%;
@@ -405,7 +406,15 @@ button, button:focus{
     color: var(--primary-color-dark);
     margin: 1rem 0;
 }
-.filled:hover, .navigation-list li:hover, .box a:hover{ 
+.delete{
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: #b50202;
+    border: 1px solid #b50202;
+    margin: 0 1rem 1rem auto;
+}
+.filled:hover, .navigation-list li:hover, .box a:hover, .btn:hover{ 
     transform: scale(1.05);
 }
 .red{
@@ -477,6 +486,7 @@ button, button:focus{
 .head{
     height: fit-content;
 }
+
 .stock-holder{
     height: 35rem;
 }
@@ -491,8 +501,8 @@ button, button:focus{
 }
 .outline-alt{
     outline: .5rem solid white;
-    width: 17rem;
-    z-index: 1;
+    width: 15rem;
+    z-index: 2;
     transition: all .3s;
 }
 .board1{
@@ -544,6 +554,11 @@ button, button:focus{
     outline: .5rem solid var(--primary-color);
     z-index: 3;
 }
+.img0{
+    top: 0%;
+    left: 35%;
+    z-index: 1
+}
 .img1{
     top: 28%;
     left: 40%;
@@ -551,11 +566,11 @@ button, button:focus{
 }
 .img2{
     top: 10%;
-    left: 5%;
+    left: -10%;
 }
 .img3{
-    bottom: 15%;
-    right: 50%;
+    bottom: 25%;
+    right: 60%;
 }
 .img4{
     width: 38%;
@@ -662,10 +677,14 @@ button, button:focus{
 
 
 }
-.md{
-    width: 2rem;
-    height: 2rem;      
-    margin: auto;    
+.md, .md:active{
+    width: 1.3rem;
+    height: 1.3rem;      
+    margin: auto;  
+    transition: all .3s;  
+}
+.md:hover{
+transform: scale(1.25);   
 }
   
 
@@ -724,7 +743,7 @@ button, button:focus{
     }
     .ratio-2, .ratio-3, .ratio-4, .ratio-5, .ratio-6, .ratio-7, .ratio-8, .ratio-9, .ratio-10{
         width: 100%;
-        margin: 1rem 2.5rem;
+        margin: 1rem 2rem;
     }
     .form-width{
         width: 90%;
@@ -732,12 +751,21 @@ button, button:focus{
     .input-holder textarea {
         width: 100% !important;
     }
+<<<<<<< HEAD
     p, .foot p, .foot li a, .contact li{
         font-size: 1.5rem;
     }
     .foot h3{
         font-size: 2rem !important;
+=======
+    p, .foot p, .foot li a, .contact li, .p{
+        font-size: 1.5rem;
+>>>>>>> 44bebf16822325e5c8e127a29c5a6ddfd89a52c4
     }
+    .foot h3{
+        font-size: 2rem !important;
+    }
+
     .card {
         margin: 1rem auto;
     }
@@ -802,6 +830,12 @@ button, button:focus{
         bottom: 10%;
         left: 20%;
     }
+
+    .md{
+        width: 2rem;
+        height: 2rem;      
+        margin: auto;    
+    }
 }
 
 @media (max-width:650px) {
@@ -834,6 +868,9 @@ button, button:focus{
     .input-holder input{
         height: 3.7rem !important;
         border-radius: 1.5rem !important;
+    }
+    .page {
+        width: 95% !important;
     }
     
     .group {
@@ -944,5 +981,3 @@ button, button:focus{
         width: 13rem;
     }    
 }
-
-

@@ -18,7 +18,7 @@ const Section_3 = () =>{
                                 <p>Join our newsletter and stay updated with our day to day movements. <span className='secondary'>NO DULL AM!</span></p>
                             </div>
                         </div>
-                        <Link to = '/Signup' className="btn hollow-dark tr">Stay Updated &rarr;</Link>
+                        <Link to = '/subscribe' className="btn hollow-dark tr">Stay Updated &rarr;</Link>
                     </div>
                 </div>
 

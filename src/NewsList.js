@@ -16,11 +16,21 @@ let news = [
     }
 ]
 
-function Newslist() {
+function Newslist({ is_logged_in }) {
 
     return(
         <div className='col page'>
+
             <div className='ratio-6 mc tl col news'>
+                {
+                    is_logged_in?(
+                        <div className='flex'>
+                            <button className = 'delete'>Delete post</button>
+                        </div>
+                    )
+                    :<></>
+                }
+                
                 <h4 className='primary-dark'>{news[0].header}</h4>
                 <p>{news[0].content}</p>
                 <div className='row space-btw details'>
@@ -33,6 +43,15 @@ function Newslist() {
             </div>
 
             <div className='ratio-6 mc tl col news'>
+                {
+                    is_logged_in?(
+                        <div className='flex'>
+                            <button className = 'delete'>Delete post</button>
+                        </div>
+                    )
+                    :<></>
+                }
+
                 <h4 className='primary-dark'>{news[1].header}</h4>
                 <p>{news[1].content}</p>
                 <div className='row space-btw details '>
@@ -43,6 +62,10 @@ function Newslist() {
                     
                     <h5 className='primary-dark mbc'>2 hours ago</h5>
                 </div>
+            </div>
+            <div className='page row ratio-6 space-btw'>
+                <a className='primary-dark underline'>Show more...</a>
+                <a className='primary-dark underline'>Show less...</a>
             </div>
         </div>
     )
