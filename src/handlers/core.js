@@ -63,7 +63,7 @@ function getCookie(key){
   return output_value;
 }
 
-module.exports = {
+export {
     server,
     fetch_post,
     routeChange,

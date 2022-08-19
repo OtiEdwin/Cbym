@@ -46,7 +46,7 @@ async function deletePost( index,          props){
 
 }
 
-module.exports = {
+export {
     post,
     deletePost
 }

@@ -5,6 +5,7 @@ const { fetch_post, routeChange, getCookie, setCookie } = require("./core.js");
 async function login(key,         props){
     let body = { key };
     
+    
     let result = await fetch_post(body, 'login');
   
     if( result.status === 'error'){
@@ -89,7 +90,7 @@ async function logout(          props){
   
 }
 
-module.exports = {
+export {
     login,
     subscribe,
     logout
