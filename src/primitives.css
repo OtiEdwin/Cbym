@@ -102,10 +102,10 @@ a{
     color: #e6e6e6;
 }
 .h1-alt{
-    font-size: 4rem;
+    font-size: 3.5rem;
 }
 h1{
-    font-size: 4em;
+    font-size: 3.5em;
 }
 h2{
     font-size: 3em;
@@ -191,10 +191,10 @@ button, button:focus{
     margin: 0 auto;
 }
 .md-36{
-    font-size: 36px;
+    font-size: 2.4rem;
 }
 .md-72{
-    font-size: 72px;
+    font-size: 4.8rem;
 }
 .m1{
     margin: 1rem;
@@ -536,7 +536,7 @@ button, button:focus{
     height: 25rem;
 }
 .board5{
-    background-image: linear-gradient(to right, #e9880046, #e98800af), url(../public/board5.png);
+    background-image: linear-gradient(to right, #e9880046, #e98800af), url(../public/board5.jpg);
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -549,15 +549,15 @@ button, button:focus{
     z-index: 3;
 }
 .outline-alt:hover{
-    width: 18rem;
+    width: 16rem;
     outline-offset: 1.2rem;
     outline: .5rem solid var(--primary-color);
     z-index: 3;
 }
 .img0{
-    top: 0%;
-    left: 35%;
-    z-index: 1
+    top: 53%;
+    left: 25%;
+    z-index: 1;
 }
 .img1{
     top: 28%;
@@ -565,8 +565,8 @@ button, button:focus{
     z-index: 1
 }
 .img2{
-    top: 10%;
-    left: -10%;
+    top: 6%;
+    left: 0%;
 }
 .img3{
     bottom: 25%;
@@ -671,6 +671,9 @@ button, button:focus{
     top: 40%;
     left: 50%;
     transform: translate(-50%, -40%);
+}
+.login-page{
+    min-height: 75vh;
 }
 .hydrated {
     visibility: inherit;
@@ -799,7 +802,7 @@ transform: scale(1.25);
         padding: 1rem 1rem;
     }
     .ms-2{
-        margin: 3rem auto;
+        margin: 3rem auto !important;
         width: 70%;
     }
     .contact h3{
@@ -814,7 +817,7 @@ transform: scale(1.25);
     }
 
     .img3 {
-        bottom: 20%;
+        bottom: 24%;
         right: 40%;
     }
 
@@ -837,7 +840,7 @@ transform: scale(1.25);
     }
 
     .img3 {
-        bottom: 20%;
+        bottom: 24%;
         right: 40%;
     }
 
@@ -883,7 +886,7 @@ transform: scale(1.25);
     }
 
     .img3 {
-        bottom: 20%;
+        bottom: 24%;
         right: 40%;
     }
 
@@ -941,7 +944,7 @@ transform: scale(1.25);
     }
 
     .img3 {
-        bottom: 20%;
+        bottom: 24%;
         right: 23%;
     }
 

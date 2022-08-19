@@ -18,14 +18,15 @@
     color: var(--primary-color);
 }
 .logo{
-    width: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50%;
     margin: 0 1rem;
 }
 .title{
     width: -moz-fit-content;
     width: fit-content;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 100;
     margin: auto;
 }

@@ -10,6 +10,7 @@ import Section_4 from './Section_4';
 import Loading_Box from './Loading';
 import Dialog_Box from './Dialog';
 import Footer from './Footer';
+import Footbar from './Footbar';
 import React, { useState } from 'react'
 import {
   BrowserRouter,
@@ -18,7 +19,6 @@ import {
 } from 'react-router-dom';
 
 
-//loader
 function Home() {
   return (
     <>
@@ -79,23 +79,39 @@ function App() {
       <Routes> 
         <Route path='/' element={ <Header display = {true} is_logged_in = { logged_in } /> }/>
         <Route path='*' element={ <Header display = {false} is_logged_in = { logged_in } /> } /> 
+        <Route path='/admin' element={ <></> } /> 
+        
       </Routes>
       
       <Routes> 
-        <Route path='*' element={ <Dialog_Box dialogue = {dialogue} dialogChange = { dialogChange }/> }/>
-        <Route path='*' element={ <Loading_Box loading = {loading} loadingChange = { loadingChange }/> }/>
+        <Route 
+          path='*' 
+          element={ 
+            <>
+              <Dialog_Box dialogue = {dialogue} dialogChange = { dialogChange }/>
+              <Loading_Box loading = {loading} loadingChange = { loadingChange }/>          
+            </>
+          }
+        />
       </Routes>
 
       <Routes>
         <Route path='/' element={ <Home/> } />
-        <Route path='/admin' element={ <Login/> } />
         <Route path='/feeds' element={ <Feeds is_logged_in = { logged_in } /> } />
         <Route path='/subscribe' element={ <Subscribe/> } />
+        <Route path='/admin' element={ <></> } />
         <Route path='/about' element={ <Section_1/> } />
         <Route path='*' element={ <Not_Found/> } />
       </Routes>
 
-      <Routes> <Route path='*' element={ <Footer/> }/> </Routes>
+      <Routes>
+        <Route path='/admin' element={ <Login/> }/>
+      </Routes>
+
+      <Routes> 
+        <Route path='/admin' element={ <Footbar/> }/> 
+        <Route path='*' element={ <Footer/> }/> 
+      </Routes>
 
     </BrowserRouter>
     

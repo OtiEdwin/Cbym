@@ -1,16 +1,17 @@
-// import { ReactDOM } from "react"
-// import './navigation.css'
 import { useState } from 'react'
 import './form.css'
 import './primitives.css'
 
 import { login } from './handlers/auth';
 
-const Login = () => {
+
+const Login = ({is_logged_in}) => {
     const [ visibility, setVisibility ] = useState('eye-off')
     const [passValue, setPassValue] = useState('password')
+
+
     function setPassword(){
-        if(visibility == 'eye-off'){
+        if(visibility === 'eye-off'){
             setVisibility('eye')
         }
         else{
@@ -18,7 +19,7 @@ const Login = () => {
         }
         
 
-        if(passValue=='password'){
+        if(passValue ==='password'){
             setPassValue('passcode')
         }
         else{
@@ -36,9 +37,18 @@ const Login = () => {
 
     return( 
         <>
-        <div className="page-full">
+            <nav className={ `ms-2` }>
+                <div className="ratio-9 space-btw">
+                    <div className="navigation-description flex">
+                        <img src="logo.jpg" alt="CBYM-logo" className="logo"/>
+                        <h4 className=' mbc primary-dark'>CBYM</h4>
+                    </div>
+                </div>
+            </nav> 
+
+        <div className="page-full login-page">
             <div className="form-holder col">
-                <h2 className='tc mc head-text-alt'><span className='dark h2'>&mdash;</span> Login to your Account</h2>
+                <h2 className='tc mc head-text-alt'>Login to your Account</h2>
 
                 <div className="login relative">
                     <form method='post' className=" form-inner col">
@@ -58,7 +68,6 @@ const Login = () => {
                                
                                
                             </div>
-                            <a href="#" className="tr primary-dark label underline">forgot Key ?</a>                             
                         </div>
 
                         <div className="group col">
