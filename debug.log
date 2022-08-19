@@ -1528,3 +1528,11 @@
 [0818/234623.445:ERROR:crash_report_database_win.cc(447)] failed to read records
 [0819/000123.452:ERROR:file_io.cc(90)] ReadExactly: expected 168, observed 0
 [0819/000123.452:ERROR:crash_report_database_win.cc(447)] failed to read records
+[0819/001617.579:ERROR:file_io.cc(90)] ReadExactly: expected 168, observed 0
+[0819/001617.579:ERROR:crash_report_database_win.cc(447)] failed to read records
+[0819/003117.588:ERROR:file_io.cc(90)] ReadExactly: expected 168, observed 0
+[0819/003117.588:ERROR:crash_report_database_win.cc(447)] failed to read records
+[0819/004617.597:ERROR:file_io.cc(90)] ReadExactly: expected 168, observed 0
+[0819/004617.597:ERROR:crash_report_database_win.cc(447)] failed to read records
+[0819/010117.605:ERROR:file_io.cc(90)] ReadExactly: expected 168, observed 0
+[0819/010117.605:ERROR:crash_report_database_win.cc(447)] failed to read records
