@@ -57,10 +57,6 @@ function Newslist({ is_logged_in }) {
             <div className='page row ratio-6 space-btw'>
                 <a className='primary-dark underline' onClick={showMore}>Show more...</a>
             </div>
-            <div className='page row ratio-6 space-btw'>
-                <a className='primary-dark underline'>Show more...</a>
-                <a className='primary-dark underline'>Show less...</a>
-            </div>
         </div>
     )
 }

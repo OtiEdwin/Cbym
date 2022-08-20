@@ -4,7 +4,22 @@ import './primitives.css'
 
 import { subscribe as subscribeHandler } from './handlers/auth';
 
-const Subscribe = () => {
+const Subscribe = ({loadingChange, dialogChange}) => {
+
+    async function register(e){
+        e.preventDefault();
+        console.log('signing in');
+
+        let email = document.getElementById('email').value,
+            firstname = document.getElementById('first-name').value,
+            lastname = document.getElementById('last-name').value;
+
+        loadingChange(true);
+        await subscribeHandler( email, firstname, lastname, { dialogChange } );
+        loadingChange(false);
+
+    }
+
     return(
         <>
         <div className="page-full" id = 'subscribe'>
@@ -40,22 +55,7 @@ const Subscribe = () => {
                             <Link to = "/feeds" className="tr primary-dark label underline">Registered Already ?</Link>                             
                         </div>
 
-                        <div className="group col" onClick={ async ()=>{
-                            console.log("Hala Madrid!!");
-                            let email = document.getElementById('email').value,
-                                firstname = document.getElementById('first-name').value,
-                                lastname = document.getElementById('last-name').value;
-
-                            await subscribeHandler(email, firstname, lastname, {} )
-                            .then( (res)=>{
-                                //success or fail
-                                console.log(res);
-                            } )
-                            .catch( (error)=>{
-                                //logerror
-                                console.log(error);
-                            } );
-                        } }>
+                        <div className="group col" onClick={ register }>
                             <a className="gradient tc">REGISTER</a>
                         </div>
 

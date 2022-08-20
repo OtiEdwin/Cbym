@@ -51,12 +51,13 @@ function Not_Found() {
 
 
 function App() {
-  const [logged_in, setLoggedIn] = useState(!true);
-  const [dialogue, setDialogue ] = useState('none')
-  const [loading, setLoading ] = useState('none')
+  const [logged_in, setLoggedIn] = useState(false);
+  const [dialogue, setDialogue ] = useState('none');
+  const [loading, setLoading ] = useState('none');
+  const [ news, setNews ] = useState([ ]);
 
-  function dialogChange() {
-    if (dialogue === 'none'){
+  function dialogChange(bool) {
+    if (bool){
       setDialogue('initial')
     }
     else{
@@ -64,8 +65,8 @@ function App() {
     }
   }
 
-  function loadingChange() {
-    if (loading === 'none'){
+  function loadingChange(bool) {
+    if (bool){
       setLoading('initial')
     }
     else{
@@ -88,8 +89,8 @@ function App() {
           path='*' 
           element={ 
             <>
-              <Dialog_Box dialogue = {dialogue} dialogChange = { dialogChange }/>
-              <Loading_Box loading = {loading} loadingChange = { loadingChange }/>          
+              <Dialog_Box dialogue = {dialogue} dialogChange = { ()=>{dialogChange(false)} }/>
+              <Loading_Box loading = {loading} loadingChange = { ()=>{loadingChange(false)} }/>          
             </>
           }
         />
@@ -98,14 +99,14 @@ function App() {
       <Routes>
         <Route path='/' element={ <Home/> } />
         <Route path='/feeds' element={ <Feeds is_logged_in = { logged_in } /> } />
-        <Route path='/subscribe' element={ <Subscribe/> } />
+        <Route path='/subscribe' element={ <Subscribe dialogChange = { dialogChange }  loadingChange = { loadingChange } /> } />
         <Route path='/admin' element={ <></> } />
         <Route path='/about' element={ <Section_1/> } />
         <Route path='*' element={ <Not_Found/> } />
       </Routes>
 
       <Routes>
-        <Route path='/admin' element={ <Login/> }/>
+        <Route path='/admin' element={ <Login dialogChange = { dialogChange }  loadingChange = { loadingChange } /> }/>
       </Routes>
 
       <Routes> 
