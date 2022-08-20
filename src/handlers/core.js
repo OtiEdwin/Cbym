@@ -35,6 +35,33 @@ async function fetch_post(body, route){
 
 }
 
+
+async function getFeeds(start_index, number,    props){
+
+  try {
+    let res = await fetch(server + `/feeds?start=${start_index};number=${number}` );
+    let data = await res.json();
+  
+    console.log(data);
+
+    if(result.status === 201){
+      console.log('successfully posted');
+      
+      // routeChange('home');
+    }else if(result.status === 401){
+      //
+      
+    }else if(result.status === 404){
+  
+    }else{
+  
+    }
+    
+  } catch (error) {
+      
+  }
+}
+
 function routeChange(route) {
   window.location.href = route;
 }
@@ -66,6 +93,7 @@ function getCookie(key){
 export {
     server,
     fetch_post,
+    getFeeds,
     routeChange,
     setCookie,
     getCookie

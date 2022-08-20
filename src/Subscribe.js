@@ -7,7 +7,7 @@ import { subscribe as subscribeHandler } from './handlers/auth';
 const Subscribe = ({loadingChange, dialogChange}) => {
 
     async function register(e){
-        e.preventDefault();
+        // e.preventDefault();
         console.log('signing in');
 
         let email = document.getElementById('email').value,
@@ -27,7 +27,7 @@ const Subscribe = ({loadingChange, dialogChange}) => {
                 <h2 className='tc mc head-text-alt'><span className='dark h2'>&mdash;</span> Subscribe to our Newsletter</h2>
 
                 <div className="login relative">
-                    <form action="" className=" form-inner col">
+                    <form action="" className=" form-inner col" onSubmit={register}>
                         <div className="group">
                             <h3 className=" primary-dark pl-1">REGISTER</h3>
                         </div>
@@ -55,8 +55,8 @@ const Subscribe = ({loadingChange, dialogChange}) => {
                             <Link to = "/feeds" className="tr primary-dark label underline">Registered Already ?</Link>                             
                         </div>
 
-                        <div className="group col" onClick={ register }>
-                            <a className="gradient tc">REGISTER</a>
+                        <div className="group col">
+                            <button className="gradient tc">REGISTER</button>
                         </div>
 
                         <div className="or relative">

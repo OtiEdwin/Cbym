@@ -1,10 +1,22 @@
-
 import './primitives.css'
+import {post as postHandler} from './handlers/privileged';
 
-function Post({ is_logged_in }) {
-    function share(){
-        console.log('sharing post')
+function Post({ is_logged_in, dialogChange, loadingChange }) {
+    async function share(e){
+        e.preventDefault();
+        console.log('sharing post');
+
+        let title = document.getElementById('title').value,
+            author = document.getElementById('author').value,
+            content = document.getElementById('content').value;
+        
+        loadingChange(true);
+        await postHandler(title, author, content, {dialogChange});
+        loadingChange(false);
+
     }
+
+    
 
     return(
             <>
@@ -13,7 +25,7 @@ function Post({ is_logged_in }) {
                     <>
                         <h3 className='tc mc head-text'>Share a post</h3>
                         <div className='flex-center'>
-                            <form method='' className='form-width'>
+                            <form className='form-width' onSubmit={share} >
                                 <div className='input-holder relative'>
                                     <label htmlFor = 'title' className='primary-dark label absolute'>Post Title</label>
                                     <input id = 'title' name = 'title' required/>
@@ -27,7 +39,7 @@ function Post({ is_logged_in }) {
                                     <textarea id='content' name = 'content' required/>
                                 </div>
                                 <div className='input-holder relative'>
-                                    <button className='btns filled' onClick={ share() }>Share &rarr;</button>
+                                    <button className='btns filled'>Share &rarr;</button>
                                 </div>
                             </form>
                         </div>                    

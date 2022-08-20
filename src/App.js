@@ -98,7 +98,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={ <Home/> } />
-        <Route path='/feeds' element={ <Feeds is_logged_in = { logged_in } /> } />
+        <Route path='/feeds' element={ <Feeds is_logged_in = { logged_in } news={news} setNews={setNews} dialogChange = { dialogChange }  loadingChange = { loadingChange } /> } />
         <Route path='/subscribe' element={ <Subscribe dialogChange = { dialogChange }  loadingChange = { loadingChange } /> } />
         <Route path='/admin' element={ <></> } />
         <Route path='/about' element={ <Section_1/> } />
