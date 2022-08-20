@@ -44,14 +44,14 @@ async function getFeeds(start_index, number,    props){
   
     console.log(data);
 
-    if(result.status === 201){
+    if(res.status === 201){
       console.log('successfully posted');
       
       // routeChange('home');
-    }else if(result.status === 401){
+    }else if(res.status === 401){
       //
       
-    }else if(result.status === 404){
+    }else if(res.status === 404){
   
     }else{
   
