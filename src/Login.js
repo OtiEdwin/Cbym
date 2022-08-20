@@ -2,7 +2,10 @@ import { useState } from 'react'
 import './form.css'
 import './primitives.css'
 
-const Login = ({is_logged_in}) => {
+import { login as loginHandler} from './handlers/auth';
+
+
+const Login = ({loadingChange, dialogChange}) => {
     const [ visibility, setVisibility ] = useState('eye-off')
     const [passValue, setPassValue] = useState('password')
 
@@ -24,8 +27,15 @@ const Login = ({is_logged_in}) => {
         }
     }
 
-    function signin(){
-        console.log('signing in')
+    async function signin(e){
+        e.preventDefault();
+        console.log('signing in');
+
+        let key = document.getElementById('password').value;
+        loadingChange(true);
+        await loginHandler(key, { dialogChange } );
+        loadingChange(false);
+
     }
 
     return( 
@@ -64,7 +74,7 @@ const Login = ({is_logged_in}) => {
                         </div>
 
                         <div className="group col">
-                            <button className="gradient tc" onClick={ signin() }>LOGIN</button>
+                            <button className="gradient tc" onClick={ signin }>LOGIN</button>
                         </div>
 
                         <div className="or relative">
