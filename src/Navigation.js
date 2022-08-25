@@ -2,15 +2,16 @@
 import './navigation.css'
 import './primitives.css'
 
+import { logout } from './handlers/auth';
 import { Link } from 'react-router-dom';
 
-function List ({ is_logged_in }){
+function List ({ is_logged_in,  setLoggedIn }){
     return(
         <>
             {
                 is_logged_in?(
                     <ul className="navigation-list anti-responsive">
-                        <li><Link to='/admin'>Logout</Link></li> 
+                        <li><Link to='/admin' onClick={()=>{logout( {setLoggedIn}); }}>Logout</Link></li> 
                     </ul>
                 )
 
@@ -31,7 +32,7 @@ function List ({ is_logged_in }){
 }
 
 
-const Navigation = ({ doSomething, is_logged_in, style_jutsu }) => {
+const Navigation = ({ doSomething, is_logged_in, setLoggedIn, style_jutsu }) => {
 
     return(
         <>
@@ -42,7 +43,7 @@ const Navigation = ({ doSomething, is_logged_in, style_jutsu }) => {
                     <p className='primary title'>CBYM</p>
                 </div>
 
-                <List is_logged_in = { is_logged_in } />
+                <List is_logged_in = { is_logged_in }  setLoggedIn ={setLoggedIn} />
                 
                 <div className="toggler relative responsive" onClick={doSomething}>
                     <div className= "slim absolute top"></div>

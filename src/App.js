@@ -11,12 +11,11 @@ import Loading_Box from './Loading';
 import Dialog_Box from './Dialog';
 import Footer from './Footer';
 import Footbar from './Footbar';
-import React, { useState } from 'react'
-import {
-  BrowserRouter,
-  Route,
-  Routes,
-} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Route, Routes, useNavigate, useLocation } from 'react-router-dom';
+import { getCookie } from './handlers/core' ; 
+
+
 
 
 function Home() {
@@ -40,8 +39,7 @@ function Not_Found() {
               <h3 className='primary-dark pl-1'>404 : Page not found</h3>
               <p>This means your url may be misspelled or broken.</p>              
             </div>
-
-          
+            
         </div>
 
     </section>
@@ -51,19 +49,43 @@ function Not_Found() {
 
 
 function App() {
+  
   const [logged_in, setLoggedIn] = useState(false);
   const [dialogue, setDialogue ] = useState('none');
+  const [message, setMessage ] = useState({title:"", content:""});
   const [loading, setLoading ] = useState('none');
   const [ news, setNews ] = useState([ ]);
 
-  function dialogChange(bool) {
+  const navigate = useNavigate();
+  const location = useLocation();
+  useEffect( ()=>{
+    //
+    window.scroll(0,0);
+  }, [location] );
+
+  
+  useEffect( ()=>{
+    //
+    if (getCookie("loggedin") === 'true'){
+      setLoggedIn(true);
+    }else{
+      setLoggedIn(false);
+    }
+  }, [] );
+
+
+  function dialogChange(bool, message ) {
     if (bool){
       setDialogue('initial')
+      setMessage({title: message.title, content: message.content});
     }
     else{
       setDialogue('none')
+      setMessage({title:"", content:""});
+
     }
   }
+
 
   function loadingChange(bool) {
     if (bool){
@@ -75,11 +97,11 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <>
 
       <Routes> 
-        <Route path='/' element={ <Header display = {true} is_logged_in = { logged_in } /> }/>
-        <Route path='*' element={ <Header display = {false} is_logged_in = { logged_in } /> } /> 
+        <Route path='/' element={ <Header display = {true} is_logged_in = { logged_in } setLoggedIn ={setLoggedIn} /> }/>
+        <Route path='*' element={ <Header display = {false} is_logged_in = { logged_in } setLoggedIn ={setLoggedIn} /> } /> 
         <Route path='/admin' element={ <></> } /> 
         
       </Routes>
@@ -89,8 +111,8 @@ function App() {
           path='*' 
           element={ 
             <>
-              <Dialog_Box dialogue = {dialogue} dialogChange = { ()=>{dialogChange(false)} }/>
-              <Loading_Box loading = {loading} loadingChange = { ()=>{loadingChange(false)} }/>          
+              <Dialog_Box dialogue = {dialogue} message = {message} cancelDialog = { ()=>{dialogChange(false, {} )} }/>
+              <Loading_Box loading = {loading} />          
             </>
           }
         />
@@ -106,7 +128,7 @@ function App() {
       </Routes>
 
       <Routes>
-        <Route path='/admin' element={ <Login dialogChange = { dialogChange }  loadingChange = { loadingChange } /> }/>
+        <Route path='/admin' element={ <Login dialogChange = { dialogChange }  loadingChange = { loadingChange } setLoggedIn ={setLoggedIn} navigate={navigate} /> }/>
       </Routes>
 
       <Routes> 
@@ -114,7 +136,7 @@ function App() {
         <Route path='*' element={ <Footer/> }/> 
       </Routes>
 
-    </BrowserRouter>
+    </>
     
   );
 }

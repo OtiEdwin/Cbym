@@ -5,7 +5,7 @@ import './primitives.css'
 import { login as loginHandler} from './handlers/auth';
 
 
-const Login = ({loadingChange, dialogChange}) => {
+const Login = ({loadingChange, dialogChange, setLoggedIn, navigate }) => {
     const [ visibility, setVisibility ] = useState('eye-off')
     const [passValue, setPassValue] = useState('password')
 
@@ -33,9 +33,11 @@ const Login = ({loadingChange, dialogChange}) => {
 
         let key = document.getElementById('password').value;
         loadingChange(true);
-        await loginHandler(key, { dialogChange } );
+        await loginHandler(key, { dialogChange, setLoggedIn, navigate } );
         loadingChange(false);
 
+        //clear
+        document.getElementById('password').value = "";
     }
 
     return( 

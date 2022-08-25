@@ -673,7 +673,7 @@ button, button:focus{
     transform: translate(-50%, -40%);
 }
 .login-page{
-    min-height: 75vh;
+    min-height: 90vh;
 }
 .hydrated {
     visibility: inherit;

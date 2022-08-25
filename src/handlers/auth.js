@@ -1,4 +1,4 @@
-const { fetch_post, routeChange, getCookie, setCookie } = require("./core.js");
+const { fetch_post, getCookie, setCookie } = require("./core.js");
 
 
 
@@ -6,15 +6,19 @@ async function login(key,         props){
   
     let body = { key };
     
-    
+    // first, logout
+    await logout(   { setLoggedIn : props.setLoggedIn});
+
     let result = await fetch_post(body, 'login');
   
     if( result.status === 'error'){
+      props.dialogChange(true, {title: `Network Error` , content: "Check your Internet connection and try again." });
       
     }else if(result.status === 201){
       console.log('successful login');
-      
-      // props.setState({ loggedin: true });
+
+      props.setLoggedIn(true);
+
       // set cookie to have logged in value
       // setCookie({cookie_object}, maxAgeSeconds);
       setCookie(
@@ -23,16 +27,14 @@ async function login(key,         props){
           'sid': result.sid,
         },  60*60*24 );
       
-      // routeChange('feeds');
-    }else if(result.status === 401){
+      // console.log(props);
+      props.navigate('/feeds');
+
+    }else {
       //
-  
-    }else if(result.status === 404){
-  
-    }else{
-  
+      props.dialogChange(true, {title: `Error ${result.status}` , content: result.content });
     }
-  
+    
 }
 
 
@@ -42,53 +44,43 @@ async function subscribe(email, firstname, lastname,         props){
     let result = await fetch_post(body, 'subscribe');
 
     if( result.status === 'error'){
-        
+      props.dialogChange(true,
+        {title: `Network Error` ,
+        content: "Check your Internet connection and try again." }
+      );
+      
       console.log(result);
     }else if(result.status === 201){
         console.log('successful subscription');
-        
-        //   routeChange('home');
-    }else if(result.status === 401){
-        //
-    }else if(result.status === 404){
+        props.dialogChange(true,
+          {title: `Success!` ,
+          content: "You can now recieve regular updates through your email." }
+        );
 
-    }else{
-
+    }else {
+      props.dialogChange(true,
+        {title: `Subscription Error(${result.status})` ,
+        content: result.content }
+      );
     }
 
 }
 
 async function logout(          props){
     let body = { sid : getCookie('sid') };
-    
-    let result = await fetch_post(body, 'logout');
-    if( result.status === 'error'){
-        
-      console.log(result);
-    }else if(result.status === 201){
-      console.log('successfully logged out');
-      
-      props.setState({ loggedin: false});
-      // set cookie to have logged in value
-      // setCookie({cookie_object}, maxAgeSeconds);
-      setCookie(
+
+    setCookie(
         {
           'loggedin': '',
           'sid': '',
         },  1);
-        
-        //   routeChange('home');
-    }else if(result.status === 401){
-        //
-    }else if(result.status === 404){
 
-    }else{
+    fetch_post(body, 'logout');
 
-    }
-  
-    
+    props.setLoggedIn(false);
+
     // routeChange('home');
-  
+    // props.history.push('/'); 
 }
 
 export {

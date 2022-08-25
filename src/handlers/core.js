@@ -39,26 +39,37 @@ async function fetch_post(body, route){
 async function getFeeds(start_index, number,    props){
 
   try {
-    let res = await fetch(server + `/feeds?start=${start_index};number=${number}` );
+    let res = await fetch(server + `/feeds?start=${start_index}&number=${number}` );
     let data = await res.json();
   
     console.log(data);
 
-    if(res.status === 201){
-      console.log('successfully posted');
-      
-      // routeChange('home');
-    }else if(res.status === 401){
-      //
-      
-    }else if(res.status === 404){
-  
+    if(data.status === 201){
+      console.log('successfully fetched feeds');
+      if (data.content.length){
+        props.addNews(data.content);
+      }else{
+        props.dialogChange(true, 
+          {title: `No new posts.` ,
+          content: "" }
+        );
+      }
+
     }else{
-  
+      console.log(`Error ${data.status}`);
+      props.dialogChange(true,
+        {title: `Error ${data.status}` ,
+        content: data.content }
+      );
     }
     
   } catch (error) {
-      
+    props.dialogChange(true,
+      {title: `Network Error` ,
+      content: "Check your Internet connection and try again." }
+    );
+
+    console.log(error);
   }
 }
 
@@ -94,7 +105,6 @@ export {
     server,
     fetch_post,
     getFeeds,
-    routeChange,
     setCookie,
     getCookie
 }

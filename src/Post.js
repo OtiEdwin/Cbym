@@ -14,6 +14,10 @@ function Post({ is_logged_in, dialogChange, loadingChange }) {
         await postHandler(title, author, content, {dialogChange});
         loadingChange(false);
 
+        //clear
+        document.getElementById('title').value = "";
+        document.getElementById('author').value = "";
+        document.getElementById('content').value = "";
     }
 
     

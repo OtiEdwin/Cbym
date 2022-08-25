@@ -8,7 +8,7 @@ const Subscribe = ({loadingChange, dialogChange}) => {
 
     async function register(e){
         // e.preventDefault();
-        console.log('signing in');
+        console.log('subscribing...');
 
         let email = document.getElementById('email').value,
             firstname = document.getElementById('first-name').value,
@@ -18,6 +18,10 @@ const Subscribe = ({loadingChange, dialogChange}) => {
         await subscribeHandler( email, firstname, lastname, { dialogChange } );
         loadingChange(false);
 
+        //clear
+        document.getElementById('email').value = "";
+        document.getElementById('first-name').value = "";
+        document.getElementById('last-name').value = "";
     }
 
     return(

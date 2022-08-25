@@ -1,15 +1,16 @@
 import Navigation from './Navigation';
 import './primitives.css';
 import React, { useState } from 'react'
+import { logout } from './handlers/auth';
 import { Link } from 'react-router-dom';
 
 
-function Header({ is_logged_in, display}) {
+function Header({ is_logged_in, display,  setLoggedIn }) {
     const [ toggle, setToggle ] = useState(1)
 
     return(
         <header>
-            <Navigation doSomething = { ()=>{setToggle((toggle + 1)%2)} } is_logged_in = { is_logged_in }/>
+            <Navigation doSomething = { ()=>{setToggle((toggle + 1)%2)} } is_logged_in = { is_logged_in }  setLoggedIn ={setLoggedIn}/>
 
             {
                 is_logged_in?( 
@@ -23,7 +24,7 @@ function Header({ is_logged_in, display}) {
                             </div>
 
                             <li className=''>
-                                <Link to='/admin'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                                <Link to='/admin'  className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2); logout( {setLoggedIn}) } }>
                                     Logout
                                     <div className=' flex-center'>
                                         <ion-icon name="log-in"></ion-icon>
