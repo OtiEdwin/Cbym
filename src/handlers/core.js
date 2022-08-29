@@ -1,4 +1,4 @@
-let server = 'http://localhost:8080/ajax';
+let server = window.location.origin + '/ajax';
 
 async function fetch_post(body, route){
 
