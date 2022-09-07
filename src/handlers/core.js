@@ -1,4 +1,5 @@
-let server = window.location.origin + '/ajax';
+let server =  (window.location.hostname === "localhost")? 'http://localhost:8080' : window.location.origin ;
+server = server + '/ajax';
 
 async function fetch_post(body, route){
 

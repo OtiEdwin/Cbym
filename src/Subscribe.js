@@ -7,7 +7,7 @@ import { subscribe as subscribeHandler } from './handlers/auth';
 const Subscribe = ({loadingChange, dialogChange}) => {
 
     async function register(e){
-        // e.preventDefault();
+        e.preventDefault();
         console.log('subscribing...');
 
         let email = document.getElementById('email').value,
