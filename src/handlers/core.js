@@ -82,7 +82,7 @@ function setCookie(cookie_object, maxAgeSeconds){
   // do a little Type checking
   for(let key in cookie_object){
     let value = cookie_object[key];
-    document.cookie = key + '=' + value + ';max-age=' + maxAgeSeconds;
+    document.cookie = key + '=' + value + ';path=/;max-age=' + maxAgeSeconds;
   }
 }
 

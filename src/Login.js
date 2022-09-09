@@ -2,13 +2,18 @@ import { useState } from 'react'
 import './form.css'
 import './primitives.css'
 
-import { login as loginHandler} from './handlers/auth';
+import { login as loginHandler, logout} from './handlers/auth';
+import { useEffect } from 'react';
 
 
 const Login = ({loadingChange, dialogChange, setLoggedIn, navigate }) => {
     const [ visibility, setVisibility ] = useState('eye-off')
     const [passValue, setPassValue] = useState('password')
 
+    useEffect( ()=>{
+        //
+        logout( {setLoggedIn} );
+      }, [] );
 
     function setPassword(){
         if(visibility === 'eye-off'){
