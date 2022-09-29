@@ -14,3 +14,5 @@
 [0928/075119.089:ERROR:crash_report_database_win.cc(447)] failed to read records
 [0928/080259.423:ERROR:file_io.cc(90)] ReadExactly: expected 168, observed 0
 [0928/080259.423:ERROR:crash_report_database_win.cc(447)] failed to read records
+[0929/231736.804:ERROR:file_io.cc(90)] ReadExactly: expected 168, observed 0
+[0929/231736.838:ERROR:crash_report_database_win.cc(447)] failed to read records
