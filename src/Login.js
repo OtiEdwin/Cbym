@@ -50,7 +50,7 @@ const Login = ({loadingChange, dialogChange, setLoggedIn, navigate }) => {
             <nav className={ `ms-2` }>
                 <div className="ratio-9 space-btw">
                     <div className="navigation-description flex">
-                        <img src="logo.jpg" alt="CBYM-logo" className="logo"/>
+                        <img src="logo.png" alt="logo" className="logo"/>
                         <h4 className=' mbc primary-dark'>CBYM</h4>
                     </div>
                 </div>

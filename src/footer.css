@@ -1,7 +1,7 @@
 /* THE FOOTER */
 
 .foot{
-    background-image: linear-gradient(to right, rgb(14 25 34),rgb(14 25 34 / 95%)), url(../footerimg.png);
+    background-image: linear-gradient(to right, rgb(14 25 34),rgb(14 25 34 / 95%)), url(../footerimg.jpg);
     color: white;
     background-size: cover;
     overflow: hidden;

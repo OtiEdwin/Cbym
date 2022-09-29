@@ -39,7 +39,7 @@ const Navigation = ({ doSomething, is_logged_in, setLoggedIn, style_jutsu }) => 
             <nav className={ `navigation navbar ${ style_jutsu }` }>
             <div className="ratio-9 space-btw">
                 <div className="navigation-description flex">
-                    <img src="logo.jpg" alt="CBYM-logo" className="logo"/>
+                    <img src="logo.png" alt="CBYM-logo" className="logo"/>
                     <p className='primary title'>CBYM</p>
                 </div>
 

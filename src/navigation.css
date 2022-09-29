@@ -18,10 +18,10 @@
     color: var(--primary-color);
 }
 .logo{
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 2.7rem;
+    height: 2.7rem;
     border-radius: 50%;
-    margin: 0 1rem;
+    margin: 0 .1rem;
 }
 .title{
     width: -moz-fit-content;
