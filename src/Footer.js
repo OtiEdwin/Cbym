@@ -17,10 +17,10 @@ function Footer() {
                     <h3><span className='primary h3'>&mdash;</span> Explore</h3>
 
                     <ul>
-                        <li><a href = {`https://api.whatsapp.com/send?phone=2347039339152&text=Hello,+i'd+like+to+make+a+donation`}>Donate</a></li>
-                        <li><a href = {`https://api.whatsapp.com/send?phone=2347039339152&text=Hello,+i'd+like+to+make+more+enquires+about+CBYM+campaigns`}>Campaign</a></li>
-                        <li><a href = {`https://api.whatsapp.com/send?phone=2347039339152&text=Hello,+i'd+like+to+know+more+about+CBYM+Volunteering`}>Volnteers</a></li>
-                        <li><a href = "https://api.whatsapp.com/send?phone=2347039339152">Contact</a></li>
+                        <li><a href = {`https://api.whatsapp.com/send?phone=2348105966585&text=Hello,+i'd+like+to+make+a+donation`}>Donate</a></li>
+                        <li><a href = {`https://api.whatsapp.com/send?phone=2348105966585&text=Hello,+i'd+like+to+make+more+enquires+about+CBYM+campaigns`}>Campaign</a></li>
+                        <li><a href = {`https://api.whatsapp.com/send?phone=2348105966585&text=Hello,+i'd+like+to+know+more+about+CBYM+Volunteering`}>Volnteers</a></li>
+                        <li><a href = "https://api.whatsapp.com/send?phone=2348105966585">Contact</a></li>
                         <li><a href = ''>Help</a></li>
                     </ul>
                 </div>
@@ -33,7 +33,7 @@ function Footer() {
                         </span>
                         <div className='pa-l'>
                         Call Us
-                        <a href = '' className='stand-out'>07039339152</a>
+                        <a href = '' className='stand-out'>08105966585</a>
                         </div>
                         
                     </li>
@@ -55,7 +55,7 @@ function Footer() {
                         </span>
                         <div className='pa-l'>
                         Leave a message
-                        <a href = {`https://api.whatsapp.com/send?phone=2347039339152`} className='stand-out'>+234 703 933 9152</a>
+                        <a href = {`https://api.whatsapp.com/send?phone=2348105966585`} className='stand-out'>+234 810 596 6585</a>
                         </div>
                             
                     </li>

@@ -79,7 +79,7 @@ function Header({ is_logged_in, display,  setLoggedIn }) {
                             </li>
         
                             <li className=''>
-                                <a href = 'https://api.whatsapp.com/send?phone=2347039339152' className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
+                                <a href = 'https://api.whatsapp.com/send?phone=2348105966585' className='mbc space-btw' onClick={ ()=>{setToggle((toggle + 1)%2)} }>
                                     Contact us
                                     <div className=' flex-center'>
                                         <ion-icon name="call"></ion-icon>

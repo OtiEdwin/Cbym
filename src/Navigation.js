@@ -21,7 +21,7 @@ function List ({ is_logged_in,  setLoggedIn }){
                         <li><Link to='/feeds'>Latest</Link></li>
                         <li><Link to='/subscribe'>Subscribe</Link></li>
                         <li><Link to='/about'>About</Link></li>
-                        <li><a href = 'https://api.whatsapp.com/send?phone=2347039339152' className="btn hollow" >Contact us</a></li>
+                        <li><a href = 'https://api.whatsapp.com/send?phone=2348105966585' className="btn hollow" >Contact us</a></li>
                     </ul>
                 )
             }         
