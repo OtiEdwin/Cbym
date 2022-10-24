@@ -42,13 +42,15 @@ function Post({ is_logged_in, dialogChange, loadingChange }) {
                                     <label htmlFor='content' className='primary-dark text-label absolute'>Post Body</label>
                                     <textarea id='content' name = 'content' required/>
                                 </div>
+                                <div className='file-holder'>
+                                    <input id = 'image' type = 'file' name = 'image' className='upload' required/>
+                                </div>
                                 <div className='input-holder relative'>
                                     <button className='btns filled'>Share &rarr;</button>
                                 </div>
                             </form>
                         </div>                    
-                    </>
-                )
+                    </>)
                 :<></>               
             }
             </>            
